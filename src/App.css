@@ -16,40 +16,45 @@
 }
 
 .nav-main {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-content {
+  display: flex;
 }
 
 .nav-links {
-  display: none;
+  display: flex;
+
   list-style-type: none;
-  justify-content: space-evenly;
   font-family: "Karla", sans-serif;
   font-size: 18pt;
   font-weight: bold;
 }
 
-#logo-top {
-  justify-self: center;
-  align-self: center;
-}
-
 .nav-links li {
-  justify-self: center;
+  margin-right: 20px;
 }
 
-@media screen and (max-width: 850px) {
-  /* Set the grid to have two rows when the screen width is less than 850px */
-  .nav-links {
-    grid-template-rows: auto auto; /* Set the grid to have two rows */
-    grid-auto-flow: row; /* Arrange the items in rows */
-  }
+.nav-icon {
+  display: none;
 }
-@media screen and (min-width: 600px) {
-  /* Show the nav links when the screen width is 400px or larger */
+
+.nav-dropdown {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
   .nav-links {
-    display: grid;
-    grid-auto-flow: column; /* Arrange the items in columns */
-    grid-gap: 1rem; /* Set the gap between items */
+    display: none;
+  }
+
+  .nav-icon {
+    display: block; /* Show the icon */
+  }
+  .nav-dropdown.show {
+    display: block;
   }
 }

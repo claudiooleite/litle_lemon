@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css'
 import Image from "../Images/Logo.svg";
+import { HamburgerIcon, Select } from '@chakra-ui/icons';
 
 function Nav() {
+    const [showNav, setShowNav] = useState(false);
+
+    const toggleNav = () => {
+        setShowNav(!showNav);
+    };
     return (
-        <div class="nav-main">
+        <div className="nav-main">
             <img id="logo-top" src={Image} alt="Logo Little Lemon restaurant" />
-            <div class="nav-content">
-                <ul class="nav-links">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Menu</li>
-                    <li>Reservations</li>
-                    <li>Order Online</li>
-                    <li>Login</li>
-                </ul>
-                <div class="nav-icon">
-                    {/* <!-- Icon goes here --> */}
-                </div>
+            <ul className={`nav-links ${showNav ? 'show' : ''}`}>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservations">Reservations</a></li>
+                <li><a href="#order-online">Order Online</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+            <div className='nav-icon' onClick={toggleNav}>
+                <HamburgerIcon />
             </div>
         </div>
     )
