@@ -1,7 +1,7 @@
 /* import fonts */
 @font-face {
   font-family: "Karla";
-  src: url("../src/assets/Fonts/Karla/Karla-Italic-VariableFont_wght.ttf");
+  src: url("../src/assets/Fonts/Karla/Karla-VariableFont_wght.ttf");
 }
 
 @font-face {
@@ -21,9 +21,35 @@
 }
 
 .nav-links {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: none;
   list-style-type: none;
   justify-content: space-evenly;
   font-family: "Karla", sans-serif;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+#logo-top {
+  justify-self: center;
+  align-self: center;
+}
+
+.nav-links li {
+  justify-self: center;
+}
+
+@media screen and (max-width: 850px) {
+  /* Set the grid to have two rows when the screen width is less than 850px */
+  .nav-links {
+    grid-template-rows: auto auto; /* Set the grid to have two rows */
+    grid-auto-flow: row; /* Arrange the items in rows */
+  }
+}
+@media screen and (min-width: 600px) {
+  /* Show the nav links when the screen width is 400px or larger */
+  .nav-links {
+    display: grid;
+    grid-auto-flow: column; /* Arrange the items in columns */
+    grid-gap: 1rem; /* Set the gap between items */
+  }
 }
