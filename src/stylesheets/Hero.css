@@ -1,0 +1,29 @@
+/* import fonts */
+@font-face {
+  font-family: "Karla";
+  src: url("../assets/Fonts/Karla/Karla-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Markazi Text";
+  src: url("../assets/Fonts/Markazi_Text/MarkaziText-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+.hero-section {
+  display: flex;
+
+  background-color: #495e57;
+}
+
+#hero-title {
+  font-family: "Markazi Text", serif;
+  font-size: 64pt;
+  color: #f4ce14;
+}
+
+#hero-subtitle {
+  font-family: "Markazi Text", serif;
+  font-size: 40pt;
+  color: #edefee;
+}

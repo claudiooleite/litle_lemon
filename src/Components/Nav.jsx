@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../App.css'
+import '../stylesheets/App.css'
 import Image from "../Images/Logo.svg";
 import { HamburgerIcon, Select } from '@chakra-ui/icons';
 
