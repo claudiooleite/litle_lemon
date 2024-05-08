@@ -1,10 +1,12 @@
 import React from 'react';
+import '../App.css'
 import Image from "../Images/Logo.svg";
+
 function Nav() {
     return (
-        <>
-            <img src={Image} alt='Logo Little Lemon restaurant' />
-            <ul>
+        <div className='nav-main'>
+            <img id='logo-top' src={Image} alt='Logo Little Lemon restaurant' />
+            <ul className='nav-links'>
                 <li>Home</li>
                 <li>About</li>
                 <li>Menu</li>
@@ -12,7 +14,7 @@ function Nav() {
                 <li>Order Online</li>
                 <li>Login</li>
             </ul>
-        </>
+        </div>
     )
 }
 
