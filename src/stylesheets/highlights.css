@@ -1,0 +1,32 @@
+/* import fonts */
+@font-face {
+  font-family: "Karla";
+  src: url("../assets/Fonts/Karla/Karla-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Markazi Text";
+  src: url("../assets/Fonts/Markazi_Text/MarkaziText-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+.button {
+  background-color: #f4ce14;
+  border-radius: 16px;
+  color: black;
+  width: 220px;
+  height: 60px;
+  font-family: "karla", serif;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.highlights-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlights.head {
+  display: flex;
+  flex-direction: row;
+}

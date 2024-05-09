@@ -1,5 +1,4 @@
 import '../stylesheets/Hero.css'
-import { Button } from '@chakra-ui/react';
 import Image from '../Images/restauranfood.jpg'
 function Hero() {
     return (

@@ -2,6 +2,7 @@ import { Card, CardBody, Stack, Heading, Text, SimpleGrid, Divider, CardFooter, 
 import Image1 from '../Images/greek salad.jpg'
 import Image2 from '../Images/bruchetta.svg'
 import Image3 from '../Images/lemon dessert.jpg'
+import '../stylesheets/highlights.css'
 
 const specialDishes = [
     {
@@ -32,34 +33,40 @@ const specialDishes = [
 
 function Highlights() {
     return (
-        <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
-            {specialDishes.map((dish, index) => (
-                <Card key={index} maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                    <CardBody>
-                        {dish.imageSrc && (
-                            <img
-                                src={dish.imageSrc}
-                                alt={dish.altContent}
-                                borderRadius='lg'
-                            />
-                        )}
-                        <Stack mt='6' spacing='3'>
-                            <Heading size='md'>{dish.name}</Heading>
-                            <Text color='blue.600' fontSize='2xl'>
-                                {dish.price}
-                            </Text>
-                            <Text>
-                                {dish.description}
-                            </Text>
-                        </Stack>
-                    </CardBody>
-                    <CardFooter>
-                        <Text>Order a Delivery</Text>
-                        {/* Add icon here */}
-                    </CardFooter>
-                </Card>
-            ))}
-        </SimpleGrid >
+        <div className="highlights-main">
+            <div className="highlights head">
+                <h1>This week special!</h1>
+                <button className="button">Online Menu</button>
+            </div>
+            <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
+                {specialDishes.map((dish, index) => (
+                    <Card key={index} maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                        <CardBody>
+                            {dish.imageSrc && (
+                                <img
+                                    src={dish.imageSrc}
+                                    alt={dish.altContent}
+                                    borderRadius='lg'
+                                />
+                            )}
+                            <Stack mt='6' spacing='3'>
+                                <Heading size='md'>{dish.name}</Heading>
+                                <Text color='blue.600' fontSize='2xl'>
+                                    {dish.price}
+                                </Text>
+                                <Text>
+                                    {dish.description}
+                                </Text>
+                            </Stack>
+                        </CardBody>
+                        <CardFooter>
+                            <Text>Order a Delivery</Text>
+                            {/* Add icon here */}
+                        </CardFooter>
+                    </Card>
+                ))}
+            </SimpleGrid >
+        </div>
     )
 }
 
