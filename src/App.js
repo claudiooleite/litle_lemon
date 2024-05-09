@@ -6,12 +6,12 @@ import Highlights from "./Components/Highlights";
 
 function App() {
   return (
-    <>
+    <div className="parent">
       <Nav />
       <Hero />
       <Highlights />
       <Footer />
-    </>
+    </div>
   );
 }
 
