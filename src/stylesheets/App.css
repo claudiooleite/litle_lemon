@@ -14,8 +14,7 @@
   height: 100vh;
   display: grid;
   grid-template-rows: 60px auto auto 250px;
-  margin-left: 290px;
-  margin-right: 290px;
+
   margin-top: 40px;
   grid-gap: 20px;
   align-items: center;
@@ -26,6 +25,8 @@
   display: grid;
   grid-template-columns: 200px auto;
   grid-template-rows: 1fr;
+  margin-left: 290px;
+  margin-right: 290px;
 }
 
 .nav-links {
