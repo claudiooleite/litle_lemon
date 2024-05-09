@@ -49,11 +49,24 @@
   font-family: "Markazi Text", serif;
   font-size: 40pt;
   color: #edefee;
+  margin-top: -25px;
+  margin-bottom: -10px;
 }
 
 .hero-content p {
   font-family: "karla", serif;
   color: #edefee;
-  font-weight: bolder;
-  font-size: 18pt;
+  font-size: 16pt;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #f4ce14;
+  border-radius: 16px;
+  color: black;
+  width: 220px;
+  height: 60px;
+  font-family: "karla", serif;
+  font-size: 16pt;
+  font-weight: bold;
 }
