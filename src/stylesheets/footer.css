@@ -1,0 +1,27 @@
+/* import fonts */
+@font-face {
+  font-family: "Karla";
+  src: url("../assets/Fonts/Karla/Karla-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Markazi Text";
+  src: url("../assets/Fonts/Markazi_Text/MarkaziText-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 290px;
+  margin-right: 290px;
+  padding-bottom: 30px;
+}
+
+.footer > * {
+  align-content: start;
+}
+
+.hover.effect {
+  align-items: flex-start;
+}

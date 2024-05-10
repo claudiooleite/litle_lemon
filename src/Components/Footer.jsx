@@ -1,31 +1,32 @@
 import Image from '../Images/Logo.svg'
-import { List, ListItem } from '@chakra-ui/react';
+import { Stack, Button, Text } from '@chakra-ui/react';
+import '../stylesheets/footer.css'
 function Footer() {
     return (
-        <>
+        <div className='footer'>
             <img src={Image} alt="restaurant logo" />
-            <List>
-                <ListItem>Doormat navigation</ListItem>
-                <ListItem>Home</ListItem>
-                <ListItem>About</ListItem>
-                <ListItem>Menu</ListItem>
-                <ListItem>Reservations</ListItem>
-                <ListItem>Order Online</ListItem>
-                <ListItem>Login</ListItem>
-            </List>
-            <List>
-                <ListItem>Contact</ListItem>
-                <ListItem>Address</ListItem>
-                <ListItem>Phone Number</ListItem>
-                <ListItem>Email</ListItem>
-            </List>
-            <List>
-                <ListItem>Social Media Links</ListItem>
-                <ListItem>Instagram</ListItem>
-                <ListItem>Facebook</ListItem>
-                <ListItem>Twitter</ListItem>
-            </List>
-        </>
+            <Stack direction='column' className='hover effect'>
+                <Text fontWeight='semibold' >Doormat navigation</Text>
+                <Button variant='link'>Home</Button>
+                <Button variant='link'>About</Button>
+                <Button variant='link'>Menu</Button>
+                <Button variant='link'>Reservations</Button>
+                <Button variant='link'>Order Online</Button>
+                <Button variant='link'>Login</Button>
+            </Stack>
+            <Stack direction='column' className='hover effect'>
+                <Text fontWeight='semibold'>Contact</Text>
+                <Button variant='link'>Address</Button>
+                <Button variant='link'>Phone Number</Button>
+                <Button variant='link'>Email</Button>
+            </Stack>
+            <Stack direction='column' className='hover effect'>
+                <Text fontWeight='semibold'>Social Media Links</Text>
+                <Button variant='link'>Instagram</Button>
+                <Button variant='link'>Facebook</Button>
+                <Button variant='link'>Twitter</Button>
+            </Stack>
+        </div>
     )
 }
 
