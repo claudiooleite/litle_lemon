@@ -1,7 +1,7 @@
 import { Card, CardBody, Stack, Heading, Text, SimpleGrid, Divider, CardFooter, ButtonGroup, Button } from "@chakra-ui/react";
 import Image1 from '../Images/greek salad.jpg'
 import Image2 from '../Images/bruchetta.svg'
-import Image3 from '../Images/lemon dessert.jpg'
+import Image3 from '../Images/moist-lemon-cake-180205-2.jpg'
 import '../stylesheets/highlights.css'
 
 const specialDishes = [
@@ -20,7 +20,7 @@ const specialDishes = [
         altContent: "toasted bread with tomatoes and olive oil"
     },
     {
-        name: "Greek Salad",
+        name: "Lemon Cake",
         price: "$25",
         description: " This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
         imageSrc: Image3,
@@ -40,7 +40,7 @@ function Highlights() {
             </div>
             <SimpleGrid className="highlights-cards" spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
                 {specialDishes.map((dish, index) => (
-                    <Card key={index} maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                    <Card key={index} maxW='sm' bg='EDEFEE' borderRadius='lg' overflow='hidden'>
                         <CardBody>
                             {dish.imageSrc && (
                                 <img
