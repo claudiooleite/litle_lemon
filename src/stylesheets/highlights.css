@@ -24,9 +24,26 @@
 .highlights-main {
   display: flex;
   flex-direction: column;
+  margin-left: 290px;
+  margin-right: 290px;
 }
 
 .highlights.head {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.highlights.head > h1 {
+  font-family: "Markazi Text";
+  font-size: 64px;
+  font-weight: 900;
+}
+
+.highlights-main > .highlights-cards {
+  display: flex;
+  justify-content: space-between;
 }

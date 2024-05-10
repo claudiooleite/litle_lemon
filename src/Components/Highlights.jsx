@@ -35,10 +35,10 @@ function Highlights() {
     return (
         <div className="highlights-main">
             <div className="highlights head">
-                <h1>This week special!</h1>
+                <h1>This week specials!</h1>
                 <button className="button">Online Menu</button>
             </div>
-            <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
+            <SimpleGrid className="highlights-cards" spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
                 {specialDishes.map((dish, index) => (
                     <Card key={index} maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
                         <CardBody>
