@@ -9,8 +9,10 @@ function App() {
   return (
     <div className="parent">
       <Nav />
-      <Hero />
-      <Highlights />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/specials" element={<Highlights />} />{" "}
+      </Routes>
       <Footer />
     </div>
   );
