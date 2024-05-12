@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../stylesheets/App.css'
 import Image from "../Images/Logo.svg";
 import { HamburgerIcon } from '@chakra-ui/icons';
+import { Link } from 'react-router-dom';
 
 
 function Nav() {
