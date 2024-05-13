@@ -1,25 +1,65 @@
-import { React, useState } from "react";
+import { React, useState, useReducer } from "react";
 import BookingForm from "./BookingForm";
-import {
-    Input, NumberInput,
-    NumberInputField,
-    NumberInputStepper,
-    NumberIncrementStepper,
-    NumberDecrementStepper,
-    FormControl,
-    FormLabel,
-    FormErrorMessage,
-    FormHelperText, Select,
-    Button
-} from "@chakra-ui/react";
 
+
+export const ActionTypes = {
+    UPDATE_AVAILABLE_TIMES: 'UPDATE_AVAILABLE_TIMES'
+};
+
+function availableTimesReducer(state, action) {
+    switch (action.type) {
+        case ActionTypes.UPDATE_AVAILABLE_TIMES:
+            const selectedDate = action.payload;
+            // Logic to update available times based on the selected date
+            // For now, let's return the same available times regardless of the date
+            return {
+                time1: '17:00',
+                time2: '18:00',
+                time3: '19:00',
+                time4: '20:00',
+                time5: '21:00',
+                time6: '22:00'
+            };
+        default:
+            return state;
+    }
+}
+
+// Function to initialize available times state
+function initializeTimesState() {
+    return {
+        time1: '17:00',
+        time2: '18:00',
+        time3: '19:00',
+        time4: '20:00',
+        time5: '21:00',
+        time6: '22:00'
+    };
+}
 
 
 function BookingPage() {
-    // Define initial state for form values
+    // Initialize available times state using reducer
+    const [availableTimes, dispatch] = useReducer(
+        availableTimesReducer,
+        initializeTimesState()
+    );
+
+    const currentDate = new Date();
+
+    // Get current hour and add one hour to it
+    const nextHour = currentDate.getHours() + 1;
+
+    // Format current date in 'YYYY-MM-DD' format
+    const formattedDate = currentDate.toISOString().slice(0, 10);
+
+    // Format next hour to always have two digits (e.g., '07' instead of '7')
+    const formattedNextHour = String(nextHour).padStart(2, '0');
+
+    // Combine date and time to form default values
     const defaultValues = {
-        date: '2024-10-23', // Date input requires 'YYYY-MM-DD' format
-        time: '17:00', // Default time
+        date: formattedDate,
+        time: `${formattedNextHour}:00`, // Set time to one hour after the current hour
         numberGuests: '2', // Default number of guests
         occasion: 'Birthday' // Default occasion
     };
@@ -30,7 +70,7 @@ function BookingPage() {
 
 
     return (
-        <BookingForm formValue={formValue} setFormValue={setFormValue} />
+        <BookingForm formValue={formValue} setFormValue={setFormValue} availableTimes={availableTimes} dispatch={dispatch} />
     );
 }
 

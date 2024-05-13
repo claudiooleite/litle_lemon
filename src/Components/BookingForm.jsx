@@ -1,37 +1,20 @@
-import { React, useReducer } from "react";
+import { React } from "react";
+import {
+    Input, NumberInput,
+    NumberInputField,
+    NumberInputStepper,
+    NumberIncrementStepper,
+    NumberDecrementStepper,
+    FormControl,
+    FormLabel,
+    FormErrorMessage,
+    FormHelperText, Select,
+    Button
+} from "@chakra-ui/react";
+import { ActionTypes } from "./BookingPage";
 
-const ActionTypes = {
-    UPDATE_AVAILABLE_TIMES: 'UPDATE_AVAILABLE_TIMES'
-};
 
-function availableTimesReducer(state, action) {
-    switch (action.type) {
-        case ActionTypes.UPDATE_AVAILABLE_TIMES:
-            // Logic to update available times based on selected date
-            return {
-                ...state,
-                // Update available times here
-            };
-        default:
-            return state;
-    }
-}
-
-// Initial state for available times
-const initialAvailableTimesState = {
-    time1: '17:00',
-    time2: '18:00',
-    time3: '19:00',
-    time4: '20:00',
-    time5: '21:00',
-    time6: '22:00'
-};
-
-function BookingForm({ formValue, setFormValue }) {
-    const [availableTimesState, dispatch] = useReducer(
-        availableTimesReducer,
-        initialAvailableTimesState
-    );
+function BookingForm({ formValue, setFormValue, availableTimes, dispatch }) {
 
     // Function to handle date change
     function handleDateChange(e) {
@@ -39,11 +22,11 @@ function BookingForm({ formValue, setFormValue }) {
             ...formValue,
             date: e.target.value
         });
-        dispatch({
-            type: ActionTypes.UPDATE_AVAILABLE_TIMES,
-            payload: e.target.value // Pass selected date as payload
-        });
+
+        // Dispatch action to update available times based on selected date
+        dispatch({ type: ActionTypes.UPDATE_AVAILABLE_TIMES });
     }
+
 
     // Function to handle time change
     function handleTimeChange(e) {
@@ -98,7 +81,7 @@ function BookingForm({ formValue, setFormValue }) {
                 onChange={handleDateChange} />
             <label htmlFor="res-time">Choose time</label>
             <select id="res-time" value={formValue.time} onChange={handleTimeChange}>
-                {Object.values(availableTimesState).map((time, index) => (
+                {Object.values(availableTimes).map((time, index) => (
                     <option key={index}>{time}</option>
                 ))}
             </select>
