@@ -1,11 +1,47 @@
-import { React } from "react";
+import { React, useReducer } from "react";
 
-function BookingForm({ formValue, setFormValue, availableTimes }) {
+const ActionTypes = {
+    UPDATE_AVAILABLE_TIMES: 'UPDATE_AVAILABLE_TIMES'
+};
+
+function availableTimesReducer(state, action) {
+    switch (action.type) {
+        case ActionTypes.UPDATE_AVAILABLE_TIMES:
+            // Logic to update available times based on selected date
+            return {
+                ...state,
+                // Update available times here
+            };
+        default:
+            return state;
+    }
+}
+
+// Initial state for available times
+const initialAvailableTimesState = {
+    time1: '17:00',
+    time2: '18:00',
+    time3: '19:00',
+    time4: '20:00',
+    time5: '21:00',
+    time6: '22:00'
+};
+
+function BookingForm({ formValue, setFormValue }) {
+    const [availableTimesState, dispatch] = useReducer(
+        availableTimesReducer,
+        initialAvailableTimesState
+    );
+
     // Function to handle date change
     function handleDateChange(e) {
         setFormValue({
             ...formValue,
             date: e.target.value
+        });
+        dispatch({
+            type: ActionTypes.UPDATE_AVAILABLE_TIMES,
+            payload: e.target.value // Pass selected date as payload
         });
     }
 
@@ -62,7 +98,7 @@ function BookingForm({ formValue, setFormValue, availableTimes }) {
                 onChange={handleDateChange} />
             <label htmlFor="res-time">Choose time</label>
             <select id="res-time" value={formValue.time} onChange={handleTimeChange}>
-                {Object.values(availableTimes).map((time, index) => (
+                {Object.values(availableTimesState).map((time, index) => (
                     <option key={index}>{time}</option>
                 ))}
             </select>
@@ -79,4 +115,4 @@ function BookingForm({ formValue, setFormValue, availableTimes }) {
 }
 
 
-export default BookingForm
+export default BookingForm;

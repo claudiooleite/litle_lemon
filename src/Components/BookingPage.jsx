@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import BookingForm from "./BookingForm";
 import {
     Input, NumberInput,
     NumberInputField,
@@ -11,7 +12,7 @@ import {
     FormHelperText, Select,
     Button
 } from "@chakra-ui/react";
-import { BookingForm } from "./BookingForm";
+
 
 
 function BookingPage() {
@@ -23,22 +24,13 @@ function BookingPage() {
         occasion: 'Birthday' // Default occasion
     };
 
-    // Define initial state for available times
-    const defaultAvailableTimes = {
-        time1: '17:00',
-        time2: '18:00',
-        time3: '19:00',
-        time4: '20:00',
-        time5: '21:00',
-        time6: '22:00'
-    };
 
     // Initialize state with default values for date, time, occasion, and available times
     const [formValue, setFormValue] = useState(defaultValues);
-    const [availableTimes, setAvailableTimes] = useState(defaultAvailableTimes);
+
 
     return (
-        <BookingForm formValue={formValue} setFormValue={setFormValue} availableTimes={availableTimes} />
+        <BookingForm formValue={formValue} setFormValue={setFormValue} />
     );
 }
 
