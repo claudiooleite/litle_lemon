@@ -17,6 +17,8 @@ function Nav() {
             <ul className={`nav-links ${showNav ? 'show' : ''}`}>
                 <li><Link to='/' className='nav-item'>Homepage</Link></li>
                 <li><Link to='/specials' className='nav-item'>Specials</Link></li>
+                <li><Link to='/bookingpage' className='nav-item'>Reserve a Table</Link></li>
+
             </ul>
 
             <div className='nav-icon' onClick={toggleNav}>
