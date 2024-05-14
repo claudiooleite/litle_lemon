@@ -6,7 +6,7 @@ export const ActionTypes = {
     UPDATE_AVAILABLE_TIMES: 'UPDATE_AVAILABLE_TIMES'
 };
 
-function availableTimesReducer(state, action) {
+export function availableTimesReducer(state, action) {
     switch (action.type) {
         case ActionTypes.UPDATE_AVAILABLE_TIMES:
             const selectedDate = action.payload;
@@ -26,7 +26,7 @@ function availableTimesReducer(state, action) {
 }
 
 // Function to initialize available times state
-function initializeTimesState() {
+export function initializeTimesState() {
     return {
         time1: '17:00',
         time2: '18:00',

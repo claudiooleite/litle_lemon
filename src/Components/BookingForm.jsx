@@ -11,7 +11,7 @@ import {
     FormErrorMessage,
     FormHelperText, Select,
     Button,
-    VStack
+    VStack, Text
 } from "@chakra-ui/react";
 import { ActionTypes } from "./BookingPage";
 
@@ -72,9 +72,11 @@ function BookingForm({ formValue, setFormValue, availableTimes, dispatch }) {
             occasion: 'Birthday' // Reset occasion to default
         });
     }
-
+    console.log('formValue:', formValue);
+    console.log('availableTimes:', availableTimes);
     return (
-        <VStack gap='24px'>
+        <VStack>
+            <Text className="header-form" >Make Your Reservation</Text>
             <form onSubmit={handleSubmit} >
                 <label htmlFor="res-date" className='sub-header'>Choose date</label>
                 <Input

@@ -68,6 +68,13 @@
 
 /* reserve table form  */
 .sub-header {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chakra-text.header-form.css-0 {
   font-family: "Markazi Text", sans-serif;
-  font-size: 40px;
+  font-size: 64px;
+  font-weight: 500;
 }
