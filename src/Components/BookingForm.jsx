@@ -1,4 +1,5 @@
 import { React } from "react";
+import '../stylesheets/App.css'
 import {
     Input, NumberInput,
     NumberInputField,
@@ -9,7 +10,8 @@ import {
     FormLabel,
     FormErrorMessage,
     FormHelperText, Select,
-    Button
+    Button,
+    VStack
 } from "@chakra-ui/react";
 import { ActionTypes } from "./BookingPage";
 
@@ -72,28 +74,32 @@ function BookingForm({ formValue, setFormValue, availableTimes, dispatch }) {
     }
 
     return (
-        <form onSubmit={handleSubmit} style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
-            <label htmlFor="res-date">Choose date</label>
-            <input
-                type="date"
-                id="res-date"
-                value={formValue.date}
-                onChange={handleDateChange} />
-            <label htmlFor="res-time">Choose time</label>
-            <select id="res-time" value={formValue.time} onChange={handleTimeChange}>
-                {Object.values(availableTimes).map((time, index) => (
-                    <option key={index}>{time}</option>
-                ))}
-            </select>
-            <label htmlFor="guests">Number of guests</label>
-            <input type="number" placeholder="1" min="1" max="10" id="guests" value={formValue.numberGuests} onChange={handleNumberGuestsChange} />
-            <label htmlFor="occasion">Occasion</label>
-            <select id="occasion" value={formValue.occasion} onChange={handleOccasionChange}>
-                <option>Birthday</option>
-                <option>Anniversary</option>
-            </select>
-            <button type="submit">Make Your Reservation</button>
-        </form>
+        <VStack gap='24px'>
+            <form onSubmit={handleSubmit} >
+                <label htmlFor="res-date" className='sub-header'>Choose date</label>
+                <Input
+                    focusBorderColor='#F4CE14'
+                    variant='outline'
+                    type="date"
+                    id="res-date"
+                    value={formValue.date}
+                    onChange={handleDateChange} />
+                <label htmlFor="res-time" className='sub-header'>Choose time</label>
+                <Select variant='outline' focusBorderColor='#F4CE14' id="res-time" value={formValue.time} onChange={handleTimeChange}>
+                    {Object.values(availableTimes).map((time, index) => (
+                        <option key={index}>{time}</option>
+                    ))}
+                </Select>
+                <label htmlFor="guests" className='sub-header'>Number of guests</label>
+                <Input variant='outline' focusBorderColor='#F4CE14' type="number" placeholder="1" min="1" max="10" id="guests" value={formValue.numberGuests} onChange={handleNumberGuestsChange} />
+                <label htmlFor="occasion" className='sub-header'>Occasion</label>
+                <Select variant='outline' focusBorderColor='#F4CE14' id="occasion" value={formValue.occasion} onChange={handleOccasionChange}>
+                    <option>Birthday</option>
+                    <option>Anniversary</option>
+                </Select>
+                <Button style={{ marginTop: '20px' }} align='center' borderRadius='16px' color='Black' background={'#F4CE14'} variant='solid' size='lg' type="submit">Make Your Reservation</Button>
+            </form>
+        </VStack >
     );
 }
 

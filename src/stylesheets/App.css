@@ -65,3 +65,9 @@
     display: block;
   }
 }
+
+/* reserve table form  */
+.sub-header {
+  font-family: "Markazi Text", sans-serif;
+  font-size: 40px;
+}
