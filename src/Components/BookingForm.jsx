@@ -1,109 +1,67 @@
-import { React } from "react";
-import '../stylesheets/App.css'
-import {
-    Input, NumberInput,
-    NumberInputField,
-    NumberInputStepper,
-    NumberIncrementStepper,
-    NumberDecrementStepper,
-    FormControl,
-    FormLabel,
-    FormErrorMessage,
-    FormHelperText, Select,
-    Button,
-    VStack, Text
-} from "@chakra-ui/react";
-import { ActionTypes } from "./BookingPage";
+// BookingForm.jsx
+import React, { useState } from "react";
+import { submitAPI } from "./apiSimulator"; // Assuming you have the submitAPI function defined in api.js
 
+const BookingForm = ({ availableTimes, updateTimes }) => {
+    const [selectedDate, setSelectedDate] = useState("");
+    const [selectedTime, setSelectedTime] = useState("");
+    const [guests, setGuests] = useState(1);
+    const [occasion, setOccasion] = useState("Birthday");
 
-function BookingForm({ formValue, setFormValue, availableTimes, dispatch }) {
+    const handleDateChange = (e) => {
+        const date = e.target.value;
+        setSelectedDate(date);
+        updateTimes(date);
+    };
 
-    // Function to handle date change
-    function handleDateChange(e) {
-        setFormValue({
-            ...formValue,
-            date: e.target.value
-        });
-
-        // Dispatch action to update available times based on selected date
-        dispatch({ type: ActionTypes.UPDATE_AVAILABLE_TIMES });
-    }
-
-
-    // Function to handle time change
-    function handleTimeChange(e) {
-        setFormValue({
-            ...formValue,
-            time: e.target.value
-        });
-    }
-
-    // Function to handle number of guests change
-    function handleNumberGuestsChange(e) {
-        setFormValue({
-            ...formValue,
-            numberGuests: e.target.value
-        });
-    }
-
-    // Function to handle occasion change
-    function handleOccasionChange(e) {
-        setFormValue({
-            ...formValue,
-            occasion: e.target.value
-        });
-    }
-
-    // Function to handle form submit
-    function handleSubmit(e) {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        const formData = {
+            date: selectedDate,
+            time: selectedTime,
+            guests: guests,
+            occasion: occasion
+        };
+        try {
+            const response = await submitAPI(formData);
+            if (response) {
+                alert("Booking submitted successfully!");
+                setSelectedDate(""); // Reset form fields
+                setSelectedTime("");
+                setGuests(1);
+                setOccasion("Birthday");
 
-        // Perform actions on form submission, such as sending data to server
-        console.log('Date:', formValue.date);
-        console.log('Time:', formValue.time);
-        console.log('Guests:', formValue.numberGuests);
-        console.log('Occasion:', formValue.occasion);
-        // Show alert on form submission
-        alert('Form submitted successfully!');
-        setFormValue({
-            date: '2024-10-23', // Reset date to default
-            time: '17:00', // Reset time to default
-            numberGuests: '2', // Reset number of guests to default
-            occasion: 'Birthday' // Reset occasion to default
-        });
-    }
-    console.log('formValue:', formValue);
-    console.log('availableTimes:', availableTimes);
+                updateTimes(selectedDate);
+            }
+        } catch (error) {
+            console.error("Error submitting booking:", error);
+        }
+    };
+
     return (
-        <VStack>
-            <Text className="header-form" >Make Your Reservation</Text>
-            <form onSubmit={handleSubmit} >
-                <label htmlFor="res-date" className='sub-header'>Choose date</label>
-                <Input
-                    focusBorderColor='#F4CE14'
-                    variant='outline'
-                    type="date"
-                    id="res-date"
-                    value={formValue.date}
-                    onChange={handleDateChange} />
-                <label htmlFor="res-time" className='sub-header'>Choose time</label>
-                <Select variant='outline' focusBorderColor='#F4CE14' id="res-time" value={formValue.time} onChange={handleTimeChange}>
-                    {Object.values(availableTimes).map((time, index) => (
-                        <option key={index}>{time}</option>
-                    ))}
-                </Select>
-                <label htmlFor="guests" className='sub-header'>Number of guests</label>
-                <Input variant='outline' focusBorderColor='#F4CE14' type="number" placeholder="1" min="1" max="10" id="guests" value={formValue.numberGuests} onChange={handleNumberGuestsChange} />
-                <label htmlFor="occasion" className='sub-header'>Occasion</label>
-                <Select variant='outline' focusBorderColor='#F4CE14' id="occasion" value={formValue.occasion} onChange={handleOccasionChange}>
-                    <option>Birthday</option>
-                    <option>Anniversary</option>
-                </Select>
-                <Button style={{ marginTop: '20px' }} align='center' borderRadius='16px' color='Black' background={'#F4CE14'} variant='solid' size='lg' type="submit">Make Your Reservation</Button>
-            </form>
-        </VStack >
-    );
-}
+        <form onSubmit={handleSubmit}>
+            <label htmlFor="res-date">Choose date</label>
+            <input type="date" id="res-date" value={selectedDate} onChange={handleDateChange} />
 
+            <label htmlFor="res-time">Choose time</label>
+            <select id="res-time" value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)}>
+                {availableTimes.map((time) => (
+                    <option key={time}>{time}</option>
+                ))}
+            </select>
+
+            <label htmlFor="guests">Number of guests</label>
+            <input type="number" id="guests" min="1" value={guests} onChange={(e) => setGuests(parseInt(e.target.value))} />
+
+            <label htmlFor="occasion">Occasion</label>
+            <select id="occasion" value={occasion} onChange={(e) => setOccasion(e.target.value)}>
+                <option value="Birthday">Birthday</option>
+                <option value="Anniversary">Anniversary</option>
+            </select>
+
+            <button type="submit">Make Your reservation</button>
+        </form>
+    );
+};
 
 export default BookingForm;
