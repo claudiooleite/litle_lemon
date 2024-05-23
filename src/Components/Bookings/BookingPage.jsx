@@ -2,7 +2,7 @@
 import React, { useReducer, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import BookingForm from "./BookingForm";
-import { fetchAPI, submitAPI } from "./apiSimulator"; // Assuming you have API functions defined in api.js
+import { fetchAPI, submitAPI } from "../Bookings/apiSimulator"; // Assuming you have API functions defined in api.js
 
 const BookingPage = () => {
     const reducer = (state, action) => {
@@ -58,7 +58,6 @@ const BookingPage = () => {
 
     return (
         <div>
-            <h1>Booking Page</h1>
             <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} submitForm={submitForm} />
         </div>
     );

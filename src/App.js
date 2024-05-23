@@ -3,9 +3,9 @@ import Hero from "./Components/Hero";
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import Highlights from "./Components/Highlights";
-import BookingPage from "./Components/BookingPage";
+import BookingPage from "./Components/Bookings/BookingPage";
 import NoPage from "./Components/NoPage";
-import ConfirmedBooking from "./Components/ConfirmedBooking";
+import ConfirmedBooking from "../src/Components/Bookings/ConfirmedBooking";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
