@@ -1,8 +1,7 @@
-// BookingForm.jsx
-import React, { useState } from "react";
-import { submitAPI } from "./apiSimulator"; // Assuming you have the submitAPI function defined in api.js
 
-const BookingForm = ({ availableTimes, updateTimes }) => {
+import React, { useState, useEffect } from "react";
+
+const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
     const [selectedDate, setSelectedDate] = useState("");
     const [selectedTime, setSelectedTime] = useState("");
     const [guests, setGuests] = useState(1);
@@ -14,6 +13,12 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
         updateTimes(date);
     };
 
+    useEffect(() => {
+        if (availableTimes.length > 0) {
+            setSelectedTime(availableTimes[0]); // Set default time to the first available time
+        }
+    }, [availableTimes]);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = {
@@ -22,24 +27,11 @@ const BookingForm = ({ availableTimes, updateTimes }) => {
             guests: guests,
             occasion: occasion
         };
-        try {
-            const response = await submitAPI(formData);
-            if (response) {
-                alert("Booking submitted successfully!");
-                setSelectedDate(""); // Reset form fields
-                setSelectedTime("");
-                setGuests(1);
-                setOccasion("Birthday");
-
-                updateTimes(selectedDate);
-            }
-        } catch (error) {
-            console.error("Error submitting booking:", error);
-        }
+        submitForm(formData); // Call the submitForm function passed as a prop
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }} onSubmit={handleSubmit}>
             <label htmlFor="res-date">Choose date</label>
             <input type="date" id="res-date" value={selectedDate} onChange={handleDateChange} />
 

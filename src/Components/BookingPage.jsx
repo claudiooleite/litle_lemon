@@ -1,7 +1,8 @@
-// BookingPage.jsx
+
 import React, { useReducer, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import BookingForm from "./BookingForm";
-import { fetchAPI } from "./apiSimulator"; // Assuming you have API functions defined in api.js
+import { fetchAPI, submitAPI } from "./apiSimulator"; // Assuming you have API functions defined in api.js
 
 const BookingPage = () => {
     const reducer = (state, action) => {
@@ -41,10 +42,24 @@ const BookingPage = () => {
         initializeTimes();
     }, []);
 
+    const navigate = useNavigate();
+
+    const submitForm = async (formData) => {
+        try {
+            const response = await submitAPI(formData);
+            if (response) {
+                navigate("/confirmedbooking");
+            }
+        } catch (error) {
+            console.error("Error submitting booking:", error);
+            alert("Error submitting booking. Please try again.");
+        }
+    };
+
     return (
         <div>
             <h1>Booking Page</h1>
-            <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} />
+            <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} submitForm={submitForm} />
         </div>
     );
 };

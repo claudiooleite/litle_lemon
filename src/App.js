@@ -4,6 +4,8 @@ import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import Highlights from "./Components/Highlights";
 import BookingPage from "./Components/BookingPage";
+import NoPage from "./Components/NoPage";
+import ConfirmedBooking from "./Components/ConfirmedBooking";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
         <Route path="/" element={<Hero />} />
         <Route path="/specials" element={<Highlights />} />{" "}
         <Route path="/bookingpage" element={<BookingPage />} />{" "}
+        <Route path="/confirmedbooking" element={<ConfirmedBooking />} />{" "}
+        <Route path="*" element={<NoPage />} />
       </Routes>
       <Footer />
     </div>

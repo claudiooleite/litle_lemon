@@ -13,9 +13,8 @@ function Nav() {
     };
     return (
         <div className="nav-main">
-            <img id="logo-top" src={Image} alt="Logo Little Lemon restaurant" />
+            <Link to='/' className='nav-item'><img id="logo-top" src={Image} alt="Logo Little Lemon restaurant" /></Link>
             <ul className={`nav-links ${showNav ? 'show' : ''}`}>
-                <li><Link to='/' className='nav-item'>Homepage</Link></li>
                 <li><Link to='/specials' className='nav-item'>Specials</Link></li>
                 <li><Link to='/bookingpage' className='nav-item'>Reserve a Table</Link></li>
 
