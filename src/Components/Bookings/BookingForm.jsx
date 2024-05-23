@@ -6,6 +6,7 @@ import {
     Button,
     VStack
 } from "@chakra-ui/react";
+import { SliderInput } from "./sliderInputNumberGuests";
 
 const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
     const [selectedDate, setSelectedDate] = useState("");
@@ -55,10 +56,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
                         <option key={time}>{time}</option>
                     ))}
                 </Select>
-
-                <label htmlFor="guests" className='sub-header'>Number of guests</label>
-                <Input variant='outline' focusBorderColor='#F4CE14' min="1" max="10" type="number" id="guests" value={guests} onChange={(e) => setGuests(parseInt(e.target.value))} />
-
+                <SliderInput value={guests} onChange={(e) => setGuests(parseInt(e.target.value))} />
                 <label htmlFor="occasion">Occasion</label>
                 <Select variant='outline' focusBorderColor='#F4CE14' id="occasion" value={occasion} onChange={(e) => setOccasion(e.target.value)}>
                     <option value="Birthday">Birthday</option>
