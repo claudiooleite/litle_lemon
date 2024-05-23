@@ -1,5 +1,11 @@
 
 import React, { useState, useEffect } from "react";
+import '../stylesheets/App.css'
+import {
+    Input, Select,
+    Button,
+    VStack
+} from "@chakra-ui/react";
 
 const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
     const [selectedDate, setSelectedDate] = useState("");
@@ -31,28 +37,37 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
     };
 
     return (
-        <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }} onSubmit={handleSubmit}>
-            <label htmlFor="res-date">Choose date</label>
-            <input type="date" id="res-date" value={selectedDate} onChange={handleDateChange} />
+        <VStack gap='24px'>
+            <form onSubmit={handleSubmit} >
+                <label htmlFor="res-date" className='sub-header'>Choose date</label>
+                <Input
+                    focusBorderColor='#F4CE14'
+                    variant='outline'
+                    type="date"
+                    id="res-date"
+                    value={selectedDate}
+                    onChange={handleDateChange} />
 
-            <label htmlFor="res-time">Choose time</label>
-            <select id="res-time" value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)}>
-                {availableTimes.map((time) => (
-                    <option key={time}>{time}</option>
-                ))}
-            </select>
 
-            <label htmlFor="guests">Number of guests</label>
-            <input type="number" id="guests" min="1" value={guests} onChange={(e) => setGuests(parseInt(e.target.value))} />
+                <label htmlFor="res-time">Choose time</label>
+                <Select variant='outline' focusBorderColor='#F4CE14' id="res-time" value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)}>
+                    {availableTimes.map((time) => (
+                        <option key={time}>{time}</option>
+                    ))}
+                </Select>
 
-            <label htmlFor="occasion">Occasion</label>
-            <select id="occasion" value={occasion} onChange={(e) => setOccasion(e.target.value)}>
-                <option value="Birthday">Birthday</option>
-                <option value="Anniversary">Anniversary</option>
-            </select>
+                <label htmlFor="guests" className='sub-header'>Number of guests</label>
+                <Input variant='outline' focusBorderColor='#F4CE14' min="1" max="10" type="number" id="guests" value={guests} onChange={(e) => setGuests(parseInt(e.target.value))} />
 
-            <button type="submit">Make Your reservation</button>
-        </form>
+                <label htmlFor="occasion">Occasion</label>
+                <Select variant='outline' focusBorderColor='#F4CE14' id="occasion" value={occasion} onChange={(e) => setOccasion(e.target.value)}>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
+                </Select>
+
+                <Button style={{ marginTop: '20px' }} align='center' borderRadius='16px' color='Black' background={'#F4CE14'} variant='solid' size='lg' type="submit">Make Your reservation</Button>
+            </form>
+        </VStack>
     );
 };
 
