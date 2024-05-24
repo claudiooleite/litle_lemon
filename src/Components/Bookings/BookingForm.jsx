@@ -57,6 +57,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
                         id="firstName"
                         type="text"
                         {...formik.getFieldProps("firstName")}
+                        aria-label="First name"
                     />
                     <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
                 </FormControl>
@@ -67,6 +68,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
                         id="lastName"
                         type="text"
                         {...formik.getFieldProps("lastName")}
+                        aria-label="Last name"
                     />
                     <FormErrorMessage>{formik.errors.lastName}</FormErrorMessage>
                 </FormControl>
@@ -77,6 +79,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
                         id="email"
                         type="email"
                         {...formik.getFieldProps("email")}
+                        aria-label="Email"
                     />
                     <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
                 </FormControl>
@@ -91,6 +94,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
                         value={formik.values.date}
                         onChange={handleDateChange}
                         onBlur={formik.handleBlur}
+                        aria-label="Choose date"
                     />
                     <FormErrorMessage>{formik.errors.date}</FormErrorMessage>
                 </FormControl>
@@ -104,6 +108,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
                         value={formik.values.time}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
+                        aria-label="Choose time"
                     >
                         {availableTimes.map((time) => (
                             <option key={time} value={time}>{time}</option>
@@ -129,6 +134,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
                         value={formik.values.occasion}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
+                        aria-label="Occasion"
                     >
                         <option value="Birthday">Birthday</option>
                         <option value="Anniversary">Anniversary</option>
@@ -146,6 +152,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
                     variant='solid'
                     size='lg'
                     type="submit"
+                    aria-label="Make Your reservation"
                     isDisabled={!formik.isValid || formik.isSubmitting}
                 >
                     Make Your reservation
