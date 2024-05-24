@@ -13,7 +13,15 @@ function App() {
     <div className="parent">
       <Nav />
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route
+          path="/"
+          element={
+            <div>
+              <Hero />
+              <Highlights />
+            </div>
+          }
+        />
         <Route path="/specials" element={<Highlights />} />{" "}
         <Route path="/bookingpage" element={<BookingPage />} />{" "}
         <Route path="/confirmedbooking" element={<ConfirmedBooking />} />{" "}
