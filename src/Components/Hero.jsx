@@ -1,6 +1,6 @@
 import '../stylesheets/Hero.css';
 import Image from '../Images/restauranfood.jpg';
-import { Link } from 'react-router-dom';
+import MyButton from './MyButton';
 
 function Hero() {
     return (
@@ -9,9 +9,7 @@ function Hero() {
                 <h1 id='hero-title'>Little Lemon</h1>
                 <h2 id='hero-subtitle'>Chicago</h2>
                 <p>We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-                <Link to='/bookingpage'>
-                    <button className='button' aria-label="Reserve a table at Little Lemon">Reserve a table</button>
-                </Link>
+                <MyButton to='/bookingpage'>Reserve a table</MyButton>
             </div>
             <div className='hero-image'>
                 <img src={Image} alt="Delicious restaurant food" />
