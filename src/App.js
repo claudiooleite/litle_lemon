@@ -6,6 +6,7 @@ import Highlights from "./Components/Highlights";
 import BookingPage from "./Components/Bookings/BookingPage";
 import NoPage from "./Components/NoPage";
 import ConfirmedBooking from "../src/Components/Bookings/ConfirmedBooking";
+import Menu from "./Components/Menu";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/specials" element={<Highlights />} />{" "}
         <Route path="/bookingpage" element={<BookingPage />} />{" "}
         <Route path="/confirmedbooking" element={<ConfirmedBooking />} />{" "}
+        <Route path="/menu" element={<Menu />} />{" "}
         <Route path="*" element={<NoPage />} />
       </Routes>
       <Footer />

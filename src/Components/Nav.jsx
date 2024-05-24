@@ -19,6 +19,7 @@ function Nav() {
             <ul className={`nav-links ${showNav ? 'show' : ''}`} id="navigation-menu" aria-expanded={showNav}>
                 <li><Link to='/specials' className='nav-item'>Specials</Link></li>
                 <li><Link to='/bookingpage' className='nav-item'>Reserve a Table</Link></li>
+                <li><Link to='/menu' className='nav-item'>Menu</Link></li>
             </ul>
 
             <div

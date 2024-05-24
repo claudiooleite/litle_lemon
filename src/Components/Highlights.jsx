@@ -1,7 +1,10 @@
 import { Card, CardBody, Stack, Heading, Text, SimpleGrid, Divider, CardFooter, ButtonGroup, Button } from "@chakra-ui/react";
+import { Link } from 'react-router-dom';
 import Image1 from '../Images/greek salad.jpg'
 import Image2 from '../Images/bruchetta.svg'
 import Image3 from '../Images/moist-lemon-cake-180205-2.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPersonBiking } from '@fortawesome/free-solid-svg-icons';
 import '../stylesheets/highlights.css'
 
 const specialDishes = [
@@ -36,7 +39,9 @@ function Highlights() {
         <div className="highlights-main">
             <div className="highlights head">
                 <h1>This week specials!</h1>
-                <button className="button">Online Menu</button>
+                <Link to='/menu' className='nav-item'>
+                    <button className="button">Online Menu</button>
+                </Link>
             </div>
             <SimpleGrid className="highlights-cards" spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
                 {specialDishes.map((dish, index) => (
@@ -60,8 +65,10 @@ function Highlights() {
                             </Stack>
                         </CardBody>
                         <CardFooter>
-                            <Text>Order a Delivery</Text>
-                            {/* Add icon here */}
+                            <Link to='/menu'>
+                                <Text>Order a Delivery</Text>
+                                <FontAwesomeIcon icon={faPersonBiking} />
+                            </Link>
                         </CardFooter>
                     </Card>
                 ))}
