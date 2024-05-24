@@ -1,5 +1,7 @@
+import '../stylesheets/Hero.css'
+
 function Menu() {
-  return <h1>Coming Very Soon...</h1>;
+  return <h1 id='hero-title'>Coming Very Soon...</h1>;
 }
 
 export default Menu;
