@@ -13,7 +13,7 @@ function Nav() {
 
     return (
         <div className="nav-main">
-            <Link to='/' className='nav-item'>
+            <Link to='/'>
                 <img id="logo-top" src={Image} alt="Logo Little Lemon restaurant" />
             </Link>
             <ul className={`nav-links ${showNav ? 'show' : ''}`} id="navigation-menu" aria-expanded={showNav}>

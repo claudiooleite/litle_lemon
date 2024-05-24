@@ -1,10 +1,13 @@
 import Image from '../Images/Logo.svg'
+import { Link } from 'react-router-dom';
 import { Stack, Button, Text } from '@chakra-ui/react';
 import '../stylesheets/footer.css'
 function Footer() {
     return (
         <div className='footer'>
-            <img src={Image} alt="restaurant logo" />
+            <Link to='/'>
+                <img src={Image} alt="restaurant logo" />
+            </Link>
             <Stack direction='column' className='hover effect'>
                 <Text fontWeight='semibold' >Doormat navigation</Text>
                 <Button variant='link'>Home</Button>
