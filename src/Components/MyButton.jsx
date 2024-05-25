@@ -19,9 +19,9 @@ function MyButton({ to, children }) {
                 aria-label={`Navigate to ${children}`}
                 bg={isClicked ? '#495E57' : '#F4CE14'}
                 borderRadius='16px'
-                width='220px'
-                height='60px'
-                fontSize='16pt'
+                // width='220px'
+                // height='60px'
+                // fontSize='16pt'
                 fontWeight='bold'
                 _hover={{ bg: '#ffea82' }}
                 onClick={handleClick}

@@ -11,42 +11,25 @@
 }
 
 .parent {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 60px auto auto 250px;
-
-  margin-top: 40px;
-  grid-gap: 20px;
-  align-items: center;
-  justify-items: stretch;
 }
 
 .nav-main {
-  display: grid;
-  grid-template-columns: 200px auto;
-  grid-template-rows: 1fr;
-  margin-left: 290px;
-  margin-right: 290px;
 }
 
 .nav-links {
-  display: flex;
-  flex-direction: row;
   list-style-type: none;
-  justify-content: flex-end;
-  gap: 20px;
 
   font-family: "Karla", sans-serif;
-  font-size: 18pt;
+
   font-weight: bold;
 }
 
 .nav-links li {
-  display: flex;
-  align-self: center;
 }
 .nav-icon {
   display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .nav-dropdown {
@@ -69,12 +52,14 @@
 /* reserve table form  */
 .sub-header {
   font-family: "Karla", sans-serif;
-  font-size: 18px;
+
   font-weight: bold;
 }
 
 .chakra-text.header-form.css-0 {
   font-family: "Markazi Text", sans-serif;
-  font-size: 64px;
-  font-weight: 500;
+}
+
+.hidden {
+  display: none;
 }
