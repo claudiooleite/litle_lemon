@@ -13,10 +13,9 @@
 .hero-section {
   background-color: #495e57;
 }
-
 .hero-content {
+  margin: 20px;
 }
-
 .hero-image {
 }
 
@@ -41,9 +40,11 @@
 }
 .hero-content p {
   font-family: "karla", serif;
+  max-width: 64ch;
   color: #edefee;
   font-size: 14pt;
   margin-bottom: 10px;
+  white-space: wrap;
 }
 
 .mybutton {

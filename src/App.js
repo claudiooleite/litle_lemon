@@ -28,7 +28,7 @@ function App() {
             element={
               <div>
                 <Hero />
-                <Highlights />
+                {/* <Highlights /> */}
               </div>
             }
           />
@@ -39,9 +39,9 @@ function App() {
           <Route path="*" element={<NoPage />} />
         </Routes>
       </GridItem>
-      <GridItem>
+      {/* <GridItem>
         <Footer />
-      </GridItem>
+      </GridItem> */}
     </Grid>
   );
 }
