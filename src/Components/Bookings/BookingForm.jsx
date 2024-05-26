@@ -40,7 +40,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
         if (availableTimes.length > 0 && formik.values.time !== availableTimes[0]) {
             formik.setFieldValue("time", availableTimes[0]);
         }
-    }, [availableTimes]);
+    }, [availableTimes, formik]);
 
     const handleDateChange = (e) => {
         const date = e.target.value;
