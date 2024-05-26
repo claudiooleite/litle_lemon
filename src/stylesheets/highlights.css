@@ -28,7 +28,7 @@
 
 .highlights.head > h1 {
   font-family: "Markazi Text";
-  font-size: 64px;
+  font-size: 38pt;
   font-weight: 900;
 }
 
@@ -38,6 +38,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .highlights.head > h1 {
+    font-size: 28pt;
+  }
   .highlights-main > .highlights-cards {
     display: flex;
     flex-direction: column;
