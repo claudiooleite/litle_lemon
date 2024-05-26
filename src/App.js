@@ -18,7 +18,7 @@ function App() {
                       "main"
                       "footer"`}
     >
-      <GridItem margin="20px" area={"header"}>
+      <GridItem area={"header"}>
         <Nav />
       </GridItem>
       <GridItem area={"main"}>

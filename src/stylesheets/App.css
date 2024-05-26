@@ -14,6 +14,8 @@
   width: 300pt;
 }
 .nav-main {
+  margin-right: 290px;
+  margin-left: 290px;
   justify-content: space-between;
 }
 .nav-item:hover {
@@ -45,7 +47,22 @@
   display: none;
 }
 
+@media screen and (max-width: 1446px) {
+  #logo-top {
+    width: 200pt;
+  }
+}
+@media screen and (max-width: 900px) {
+  .nav-main {
+    margin-right: 150px;
+    margin-left: 150px;
+  }
+}
 @media screen and (max-width: 600px) {
+  .nav-main {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
   #logo-top {
     width: 150pt;
   }
