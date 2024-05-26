@@ -28,7 +28,7 @@ function App() {
             element={
               <div>
                 <Hero />
-                {/* <Highlights /> */}
+                <Highlights />
               </div>
             }
           />

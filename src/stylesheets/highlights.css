@@ -10,17 +10,6 @@
     format("truetype");
 }
 
-.button {
-  background-color: #f4ce14;
-  border-radius: 16px;
-  color: black;
-  width: 220px;
-  height: 60px;
-  font-family: "karla", serif;
-  font-size: 16pt;
-  font-weight: bold;
-}
-
 .highlights-main {
   display: flex;
   flex-direction: column;
@@ -46,4 +35,30 @@
 .highlights-main > .highlights-cards {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .highlights-main > .highlights-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .highlights-main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .highlights.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.css-1a7q9t8 a {
+  display: flex;
+  gap: 10px;
 }
