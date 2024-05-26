@@ -19,3 +19,19 @@ Welcome to the Little Lemon restaurant web app project! This project was created
 - **Chakra UI**
 - **FontAwesome**
 - **CSS** (with responsive design)
+
+## Screenshots
+
+### Home Page
+
+![Home Page Small Screens](./public/%25PUBLIC_URL%25/Image/main.phone.png)
+
+![Home Page Large Screens](./public/%25PUBLIC_URL%25/Image/main.largedisplay.png)
+
+### Specials Page
+
+![Specials Page](./public/%25PUBLIC_URL%25/Image/specials.png)
+
+### Booking Page
+
+![Booking Page](./public/%25PUBLIC_URL%25/Image/booking.png)
