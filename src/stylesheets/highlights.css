@@ -1,4 +1,3 @@
-/* import fonts */
 @font-face {
   font-family: "Karla";
   src: url("../assets/Fonts/Karla/Karla-VariableFont_wght.ttf");
@@ -34,10 +33,43 @@
 
 .highlights-main > .highlights-cards {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 100px;
+}
+
+@media screen and (max-width: 1200px) {
+  .highlights-main {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .highlights-main {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .highlights-main {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .highlights-main {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
   .highlights.head > h1 {
     font-size: 28pt;
   }
@@ -47,8 +79,6 @@
     align-items: center;
   }
   .highlights-main {
-    display: flex;
-    flex-direction: column;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -56,12 +86,5 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
-}
-
-.css-1a7q9t8 a {
-  display: flex;
-  gap: 10px;
 }

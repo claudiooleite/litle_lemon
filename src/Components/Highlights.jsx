@@ -1,13 +1,13 @@
+import React from 'react';
 import { Card, CardBody, Stack, Heading, Text, SimpleGrid, Divider, CardFooter, ButtonGroup, Button } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
-import MyButton from "./MyButton"
-import Image1 from '../Images/greek salad.jpg'
-import Image2 from '../Images/bruchetta.svg'
-import Image3 from '../Images/moist-lemon-cake-180205-2.jpg'
+import MyButton from "./MyButton";
+import Image1 from '../Images/greek salad.jpg';
+import Image2 from '../Images/bruchetta.svg';
+import Image3 from '../Images/moist-lemon-cake-180205-2.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonBiking } from '@fortawesome/free-solid-svg-icons';
-import '../stylesheets/highlights.css'
-
+import '../stylesheets/highlights.css';
 
 const specialDishes = [
     {
@@ -27,14 +27,11 @@ const specialDishes = [
     {
         name: "Lemon Cake",
         price: "$25",
-        description: " This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+        description: "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
         imageSrc: Image3,
         altContent: "lemon cake on a plate"
     }
-
-]
-
-
+];
 
 function Highlights() {
     return (
@@ -42,14 +39,13 @@ function Highlights() {
             <div className="highlights head">
                 <h1>This week specials!</h1>
                 <MyButton to='/menu'>Online Menu</MyButton>
-
             </div>
-            <SimpleGrid className="highlights-cards" spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
+            <SimpleGrid className="highlights-cards" spacing={4} templateColumns='repeat(auto-fill, minmax(150px, 1fr))'>
                 {specialDishes.map((dish, index) => (
                     <Card key={index} maxW='sm' bg='EDEFEE' borderRadius='lg' overflow='hidden'>
                         <CardBody>
                             {dish.imageSrc && (
-                                <img
+                                <img className="image-highlights"
                                     src={dish.imageSrc}
                                     alt={dish.altContent}
                                     borderRadius='lg'
@@ -75,7 +71,7 @@ function Highlights() {
                 ))}
             </SimpleGrid >
         </div>
-    )
+    );
 }
 
 export default Highlights;

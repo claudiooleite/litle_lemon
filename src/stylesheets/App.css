@@ -48,17 +48,45 @@
 }
 
 @media screen and (max-width: 1446px) {
+  .nav-links {
+    gap: 15px;
+    font-size: 16pt;
+  }
   #logo-top {
     width: 200pt;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
+  .nav-links {
+    font-size: 16pt;
+  }
+  #logo-top {
+    width: 150pt;
+  }
+  .nav-main {
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+}
+@media screen and (max-width: 992px) {
   .nav-main {
     margin-right: 150px;
     margin-left: 150px;
   }
 }
+@media screen and (max-width: 768px) {
+  .nav-main {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}
 @media screen and (max-width: 600px) {
+  .nav-main {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
   .nav-main {
     margin-right: 20px;
     margin-left: 20px;
