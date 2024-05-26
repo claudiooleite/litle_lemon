@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../stylesheets/App.css';
 import Image from "../Images/Logo.svg";
 import { HamburgerIcon } from '@chakra-ui/icons';
-import { Flex, Box, Spacer } from '@chakra-ui/react';
+import { Flex, Box, Spacer, Menu, MenuButton, MenuList, MenuItem, IconButton } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 function Nav() {
@@ -26,25 +26,37 @@ function Nav() {
                     <li><Link to='/bookingpage' className='nav-item'>Reserve a Table</Link></li>
                     <li><Link to='/menu' className='nav-item'>Menu</Link></li>
                 </ul>
+                <Box className="nav-icon">
+                    <Menu
 
-                <div
-                    className='nav-icon'
-                    onClick={toggleNav}
-                    aria-label="Toggle navigation menu"
-                    aria-controls="navigation-menu"
-                    aria-expanded={showNav}
-                    role="button"
-                    tabIndex={0}
-                    onKeyPress={(e) => {
-                        if (e.key === 'Enter') {
-                            toggleNav();
-                        }
-                    }}
-                >
-                    <HamburgerIcon />
-                </div>
+                    >
+                        <MenuButton
+                            as={IconButton}
+                            aria-label='Toggle navigation menu'
+                            icon={<HamburgerIcon />}
+                            variant='outline'
+                            onClick={toggleNav}
+                            aria-expanded={showNav}
+                        />
+                        <MenuList>
+                            <MenuItem>
+                                <Link to='/specials' className='nav-item'>Specials</Link>
+
+                            </MenuItem>
+                            <MenuItem >
+                                <Link to='/bookingpage' className='nav-item'>Reserve a Table</Link>
+
+                            </MenuItem>
+                            <MenuItem >
+                                <Link to='/menu' className='nav-item'>Menu</Link>
+                            </MenuItem>
+
+                        </MenuList>
+
+                    </Menu>
+                </Box>
             </Box>
-        </Flex>
+        </Flex >
     );
 }
 
