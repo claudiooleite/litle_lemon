@@ -78,10 +78,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .highlights-main {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+
   .highlights.head {
     display: flex;
     flex-direction: column;
