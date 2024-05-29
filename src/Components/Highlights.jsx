@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, Stack, Heading, Text, SimpleGrid, Divider, CardFooter, ButtonGroup, Button } from "@chakra-ui/react";
+import { Card, CardBody, Stack, Heading, Text, SimpleGrid, CardFooter,} from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import MyButton from "./MyButton";
 import Image1 from '../Images/greek salad.jpg';
