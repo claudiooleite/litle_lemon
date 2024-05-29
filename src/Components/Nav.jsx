@@ -21,7 +21,11 @@ function Nav() {
             </Box>
             <Spacer />
             <Box>
+<<<<<<< HEAD
                 <ul className={`nav-links ${showNav ? 'show' : ''}`} id="navigation-menu" >
+=======
+                <ul className={`nav-links ${showNav ? 'show' : ''}`} id="navigation-menu">
+>>>>>>> devArea
                     <li><Link to='/specials' className='nav-item'>Specials</Link></li>
                     <li><Link to='/bookingpage' className='nav-item'>Reserve a Table</Link></li>
                     <li><Link to='/menu' className='nav-item'>Menu</Link></li>

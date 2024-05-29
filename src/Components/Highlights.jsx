@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Card, CardBody, Stack, Heading, Text, SimpleGrid, CardFooter } from "@chakra-ui/react";
+=======
+import { Card, CardBody, Stack, Heading, Text, SimpleGrid, CardFooter,} from "@chakra-ui/react";
+>>>>>>> devArea
 import { Link } from 'react-router-dom';
 import MyButton from "./MyButton";
 import Image1 from '../Images/greek salad.jpg';
