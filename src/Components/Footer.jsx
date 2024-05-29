@@ -1,4 +1,4 @@
-import Image from '../Images/Logo.svg'
+import Image from '../Images/logo2.png'
 import { Link } from 'react-router-dom';
 import { Stack, Button, Text } from '@chakra-ui/react';
 import '../stylesheets/footer.css'

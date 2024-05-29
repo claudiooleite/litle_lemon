@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../stylesheets/App.css';
-import Image from "../Images/Logo.svg";
+import Image from "../Images/logo.png";
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Flex, Box, Spacer, Menu, MenuButton, MenuList, MenuItem, IconButton } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
@@ -21,11 +21,7 @@ function Nav() {
             </Box>
             <Spacer />
             <Box>
-<<<<<<< HEAD
-                <ul className={`nav-links ${showNav ? 'show' : ''}`} id="navigation-menu" >
-=======
                 <ul className={`nav-links ${showNav ? 'show' : ''}`} id="navigation-menu">
->>>>>>> devArea
                     <li><Link to='/specials' className='nav-item'>Specials</Link></li>
                     <li><Link to='/bookingpage' className='nav-item'>Reserve a Table</Link></li>
                     <li><Link to='/menu' className='nav-item'>Menu</Link></li>
