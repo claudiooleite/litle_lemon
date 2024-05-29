@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, Stack, Heading, Text, SimpleGrid, CardFooter,} from "@chakra-ui/react";
+import { Card, CardBody, Stack, Heading, Text, SimpleGrid, CardFooter, Box } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import MyButton from "./MyButton";
 import Image1 from '../Images/greek salad.jpg';
@@ -45,11 +45,12 @@ function Highlights() {
                     <Card key={index} maxW='sm' bg='EDEFEE' borderRadius='lg' overflow='hidden'>
                         <CardBody>
                             {dish.imageSrc && (
-                                <img className="image-highlights"
-                                    src={dish.imageSrc}
-                                    alt={dish.altContent}
-                                    borderRadius='lg'
-                                />
+                                <Box borderRadius='lg' overflow='hidden'>
+                                    <img className="image-highlights"
+                                        src={dish.imageSrc}
+                                        alt={dish.altContent}
+                                    />
+                                </Box>
                             )}
                             <Stack mt='6' spacing='3'>
                                 <Heading size='md'>{dish.name}</Heading>
@@ -69,7 +70,7 @@ function Highlights() {
                         </CardFooter>
                     </Card>
                 ))}
-            </SimpleGrid >
+            </SimpleGrid>
         </div>
     );
 }
