@@ -28,23 +28,23 @@
 }
 
 #hero-title {
-  font-family: "Markazi Text", serif;
+  font-family: "Markazi Text";
   font-size: 64pt;
   color: #f4ce14;
 }
 
 #hero-subtitle {
-  font-family: "Markazi Text", serif;
+  font-family: "Markazi Text";
 
   color: #edefee;
 }
 
 .hero-content h2 {
   font-size: 20pt;
-  font-family: "Markazi Text", serif;
+  font-family: "Markazi Text";
 }
 .hero-content p {
-  font-family: "karla", serif;
+  font-family: "karla";
   max-width: 64ch;
   color: #edefee;
   font-size: 14pt;
@@ -57,7 +57,7 @@
 
   color: black;
 
-  font-family: "karla", serif;
+  font-family: "karla";
 
   font-weight: bold;
 }

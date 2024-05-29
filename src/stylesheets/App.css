@@ -27,7 +27,7 @@
   display: flex;
   list-style-type: none;
   gap: 40px;
-  font-family: "Karla", sans-serif;
+  font-family: "Karla";
   font-size: 18pt;
   font-weight: bold;
 }
@@ -118,13 +118,13 @@
 
 /* reserve table form  */
 .sub-header {
-  font-family: "Karla", sans-serif;
+  font-family: "Karla";
 
   font-weight: bold;
 }
 
 .chakra-text.header-form.css-0 {
-  font-family: "Markazi Text", sans-serif;
+  font-family: "Markazi Text";
 }
 
 .hidden {
