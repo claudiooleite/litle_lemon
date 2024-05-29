@@ -74,6 +74,26 @@
     margin-left: 150px;
   }
 }
+
+@media screen and (max-width: 890px) {
+  .nav-main {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  .css-17xejub {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+  .nav-dropdown.show {
+    display: block;
+  }
+}
 @media screen and (max-width: 768px) {
   .nav-main {
     margin-right: 100px;
@@ -93,19 +113,6 @@
   }
   #logo-top {
     width: 150pt;
-  }
-  .css-17xejub {
-    display: block;
-  }
-  .nav-links {
-    display: none;
-  }
-
-  .nav-icon {
-    display: block;
-  }
-  .nav-dropdown.show {
-    display: block;
   }
 }
 

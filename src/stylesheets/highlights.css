@@ -67,6 +67,25 @@
     margin-left: 50px;
     margin-right: 50px;
   }
+  .highlights-main > .highlights-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .highlights-main > .highlights-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlights.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chakra-card {
+    flex: auto;
+  }
 }
 
 @media screen and (max-width: 400px) {
