@@ -42,17 +42,17 @@ function Highlights() {
             </div>
             <SimpleGrid className="highlights-cards" spacing={4} templateColumns='repeat(auto-fill, minmax(150px, 1fr))'>
                 {specialDishes.map((dish, index) => (
-                    <Card key={index} maxW='sm' bg='EDEFEE' borderRadius='lg' overflow='hidden'>
+                    <Card key={index}>
                         <CardBody>
                             {dish.imageSrc && (
-                                <Box borderRadius='lg' overflow='hidden'>
+                                <Box >
                                     <img className="image-highlights"
                                         src={dish.imageSrc}
                                         alt={dish.altContent}
                                     />
                                 </Box>
                             )}
-                            <Stack mt='6' spacing='3'>
+                            <Stack>
                                 <Heading size='md'>{dish.name}</Heading>
                                 <Text color='blue.600' fontSize='2xl'>
                                     {dish.price}

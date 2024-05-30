@@ -13,7 +13,7 @@ function Nav() {
     };
 
     return (
-        <Flex minWidth='max-content' alignItems='center' className="nav-main">
+        <Flex>
             <Box>
                 <Link to='/'>
                     <img id="logo-top" src={Image} alt="Logo Little Lemon restaurant" />

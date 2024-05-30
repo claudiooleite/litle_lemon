@@ -10,7 +10,7 @@
     format("truetype");
 }
 
-#logo-top {
+/* #logo-top {
   width: 300pt;
 }
 .nav-main {
@@ -40,10 +40,10 @@
 
 .nav-dropdown {
   display: none;
-}
+} */
 
 /* //spacer container */
-.css-17xejub {
+/* .css-17xejub {
   display: none;
 }
 
@@ -107,10 +107,10 @@
   .nav-dropdown.show {
     display: block;
   }
-}
+} */
 
 /* reserve table form  */
-.sub-header {
+/* .sub-header {
   font-family: "Karla", sans-serif;
 
   font-weight: bold;
@@ -122,4 +122,4 @@
 
 .hidden {
   display: none;
-}
+} */

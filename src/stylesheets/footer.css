@@ -9,7 +9,7 @@
   src: url("../assets/Fonts/Markazi_Text/MarkaziText-VariableFont_wght.ttf")
     format("truetype");
 }
-
+/* 
 .footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -62,4 +62,4 @@
     margin-left: 50px;
     margin-right: 50px;
   }
-}
+} */

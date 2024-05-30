@@ -6,7 +6,9 @@ import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import Highlights from "./Components/Highlights";
 import BookingPage from "./Components/Bookings/BookingPage";
+import ReviewsCard from "./Components/ReviewsCard";
 import NoPage from "./Components/NoPage";
+import About from "./Components/About";
 import ConfirmedBooking from "../src/Components/Bookings/ConfirmedBooking";
 import Menu from "./Components/Menu";
 import "../src/stylesheets/App.css";
@@ -38,6 +40,12 @@ function App() {
           <Route path="/menu" element={<Menu />} />{" "}
           <Route path="*" element={<NoPage />} />
         </Routes>
+      </GridItem>
+      <GridItem>
+        <ReviewsCard />
+      </GridItem>
+      <GridItem>
+        <About/>
       </GridItem>
       <GridItem>
         <Footer />
