@@ -16,9 +16,8 @@ function NavLargeDisplay() {
                 <Box>
                     <ul id="navigation-menu">
                         <li><Link to='/bookingpage' className='nav-item'>Reserve a Table</Link></li>
-                        <li><Link to='/menu' className='nav-item'>Menu</Link></li>
-                        <li><Link  to='about' className='nav-item' >About</Link></li>
-                        <li><Link  to='reviews' className='nav-item' >Reviews</Link></li>
+                        <li><Link to='/menu' className='nav-item'>Our Menu</Link></li>
+                        <li><Link to='about' className='nav-item' >About</Link></li>
                     </ul>
 
                 </Box>

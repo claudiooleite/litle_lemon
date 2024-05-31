@@ -5,7 +5,7 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter} from "react-router-dom";
-import AppRoutes from "./Routes";
+import AppRoutes from "./routes";
 import theme from "./stylesheets/theme";
 import "./stylesheets/index.css";
 

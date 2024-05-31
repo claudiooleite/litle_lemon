@@ -34,7 +34,7 @@ function NavMobile() {
                                 Reserve a Table
                             </Link>
                             <Link as={RouterLink} to='/menu' onClick={onClose} className='nav-item'>
-                                Menu
+                                Our Menu
                             </Link>
                             <Link as={RouterLink} to='/about' onClick={onClose} className='nav-item'>
                                 About
