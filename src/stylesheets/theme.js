@@ -40,6 +40,15 @@ const theme = extendTheme({
     bold: 700,
     extrabold: 800,
   },
+  components: {
+    BreadcrumbLink: {
+      baseStyle: {
+        color: "brand.800",
+        fontSize: "60px",
+        fontFamily: "body",
+      },
+    },
+  },
 });
 
 export default theme;
