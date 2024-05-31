@@ -44,8 +44,9 @@ const theme = extendTheme({
     BreadcrumbLink: {
       baseStyle: {
         color: "brand.800",
-        fontSize: "60px",
+        fontSize: "md",
         fontFamily: "body",
+        fontWeight: "bold",
       },
     },
   },
