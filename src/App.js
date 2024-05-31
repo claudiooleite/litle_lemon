@@ -12,23 +12,25 @@ function App() {
     <Grid
       templateAreas={`"header"
                       "main"
+                      "specials"
+                      "reviews"
                       "footer"`}
     >
       <GridItem area={"header"}>
         <Nav />
       </GridItem>
-      <GridItem area={"main"}>
+      {/* <GridItem area={"main"}>
         <Hero/>
       </GridItem>
-      <GridItem>
+      <GridItem area={"specials"}>
         <Highlights/>
       </GridItem>
-      <GridItem>
+      <GridItem area={"reviews"}>
         <ReviewsCard />
       </GridItem>
-      <GridItem>
+      <GridItem area={"footer"}>
         <Footer />
-      </GridItem>
+      </GridItem> */}
     </Grid>
   );
 }
