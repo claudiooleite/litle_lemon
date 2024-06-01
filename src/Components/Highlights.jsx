@@ -35,24 +35,26 @@ const specialDishes = [
 
 function Highlights() {
     return (
-        <div >
-            <div >
+        <div className="highlights-main">
+            <div className="highlights head">
+
                 <h1>This week specials!</h1>
                 <MyButton to='/menu'>Online Menu</MyButton>
             </div>
-            <SimpleGrid  spacing={4} templateColumns='repeat(auto-fill, minmax(150px, 1fr))'>
+            <SimpleGrid className="highlights-cards" spacing={4} templateColumns='repeat(auto-fill, minmax(150px, 1fr))'>
                 {specialDishes.map((dish, index) => (
-                    <Card key={index}>
+                    <Card key={index} maxW='sm' bg='EDEFEE' borderRadius='lg' overflow='hidden'>
                         <CardBody>
                             {dish.imageSrc && (
-                                <Box >
-                                    <img
+
+                                <Box borderRadius='lg' overflow='hidden'>
+                                    <img className="image-highlights"
                                         src={dish.imageSrc}
                                         alt={dish.altContent}
                                     />
                                 </Box>
                             )}
-                            <Stack>
+                            <Stack mt='6' spacing='3'>
                                 <Heading size='md'>{dish.name}</Heading>
                                 <Text color='blue.600' fontSize='2xl'>
                                     {dish.price}
@@ -76,3 +78,4 @@ function Highlights() {
 }
 
 export default Highlights;
+

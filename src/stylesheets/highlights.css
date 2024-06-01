@@ -8,7 +8,7 @@
   src: url("../assets/Fonts/Markazi_Text/MarkaziText-VariableFont_wght.ttf")
     format("truetype");
 }
-/* 
+
 .highlights-main {
   display: flex;
   flex-direction: column;
@@ -87,4 +87,4 @@
   .chakra-card {
     flex: auto;
   }
-} */
+}

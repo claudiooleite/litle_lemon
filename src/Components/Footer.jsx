@@ -8,7 +8,7 @@ function Footer() {
             <Link to='/'>
                 <img src={Image} alt="restaurant logo" />
             </Link>
-            <Stack className='hover effect'>
+            <Stack direction='column' className='hover effect'>
                 <Text fontWeight='semibold' >Doormat navigation</Text>
                 <Button variant='link'>Home</Button>
                 <Button variant='link'>About</Button>
@@ -17,13 +17,13 @@ function Footer() {
                 <Button variant='link'>Order Online</Button>
                 <Button variant='link'>Login</Button>
             </Stack>
-            <Stack className='hover effect'>
+            <Stack direction='column' className='hover effect'>
                 <Text fontWeight='semibold'>Contact</Text>
                 <Button variant='link'>Address</Button>
                 <Button variant='link'>Phone Number</Button>
                 <Button variant='link'>Email</Button>
             </Stack>
-            <Stack className='hover effect'>
+            <Stack direction='column' className='hover effect'>
                 <Text fontWeight='semibold'>Social Media Links</Text>
                 <Button variant='link'>Instagram</Button>
                 <Button variant='link'>Facebook</Button>
