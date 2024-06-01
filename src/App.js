@@ -4,7 +4,7 @@ import Hero from "./Components/Hero";
 import PageContainer from "./Components/PageContainer";
 import Highlights from "./Components/Highlights";
 import ReviewsCard from "./Components/ReviewsCard";
-import "../src/stylesheets/App.css";
+
 
 function App() {
   return (

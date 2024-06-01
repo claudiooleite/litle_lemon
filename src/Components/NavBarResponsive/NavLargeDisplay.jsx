@@ -10,15 +10,25 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 
 function NavLargeDisplay() {
     return (
-        <nav>
-            <Flex alignItems={'center'}>
+        <Box
+            py={{ base: 4, md: 8 }}
+            px={{ base: 4, md: 8 }}
+            display="flex"
+            justifyContent="center"
+        >
+            <Flex
+                alignItems="center"
+                maxWidth="1024px"
+                width="100%"
+                mx="auto"
+            >
                 <Box p='4'>
                     <Link to='/'>
                         <Image width={'16rem'} id="logo-top" src={image} alt="Logo Little Lemon restaurant" />
                     </Link>
                 </Box>
                 <Spacer />
-                <Breadcrumb separator={<ChevronRightIcon color='gray.500' p='4' />}>
+                <Breadcrumb p='4' separator={<ChevronRightIcon color='gray.500' />}>
                     <BreadcrumbItem>
                         <BreadcrumbLink as={Link} to='/bookingpage' sx={{ fontSize: "1.6rem", fontWeight: "bold" }}>
                             Reserve a Table
@@ -36,7 +46,7 @@ function NavLargeDisplay() {
                     </BreadcrumbItem>
                 </Breadcrumb>
             </Flex>
-        </nav>
+        </Box>
     );
 }
 

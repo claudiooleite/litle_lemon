@@ -6,7 +6,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes";
 import theme from "./stylesheets/theme";
-import "./stylesheets/index.css";
+import "../src/stylesheets/App.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
