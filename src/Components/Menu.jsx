@@ -1,4 +1,4 @@
-import '../stylesheets/Hero.css'
+
 import Footer from "./Footer";
 import Nav from "./NavBarResponsive/Nav";
 

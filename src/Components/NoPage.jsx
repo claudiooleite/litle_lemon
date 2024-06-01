@@ -1,4 +1,4 @@
-import '../stylesheets/Hero.css'
+
 import PageContainer from './PageContainer';
 function NoPage() {
     return (
