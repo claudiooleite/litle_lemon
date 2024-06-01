@@ -1,4 +1,3 @@
-import '../stylesheets/Hero.css';
 import image from '../Images/restaurant chef B.jpg';
 import MyButton from './MyButton';
 import { Flex, useMediaQuery, Heading, Text, Image, Box } from '@chakra-ui/react';
