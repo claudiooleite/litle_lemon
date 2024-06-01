@@ -12,13 +12,13 @@ function NavLargeDisplay() {
     return (
         <nav>
             <Flex alignItems={'center'}>
-                <Box>
+                <Box p='4'>
                     <Link to='/'>
                         <Image width={'16rem'} id="logo-top" src={image} alt="Logo Little Lemon restaurant" />
                     </Link>
                 </Box>
                 <Spacer />
-                <Breadcrumb separator={<ChevronRightIcon color='gray.500' />}>
+                <Breadcrumb separator={<ChevronRightIcon color='gray.500' p='4' />}>
                     <BreadcrumbItem>
                         <BreadcrumbLink as={Link} to='/bookingpage' sx={{ fontSize: "1.6rem", fontWeight: "bold" }}>
                             Reserve a Table

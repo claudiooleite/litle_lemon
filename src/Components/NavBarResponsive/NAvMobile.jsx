@@ -13,7 +13,7 @@ function NavMobile() {
             <Flex alignItems='center'>
                 <Box p='4' >
                     <RouterLink to='/'>
-                        <Image width={'4rem'} id="logo-top" src={image} alt="Logo Little Lemon restaurant" />
+                        <Image width={'3rem'} id="logo-top" src={image} alt="Logo Little Lemon restaurant" />
                     </RouterLink>
                 </Box>
                 <Spacer />
