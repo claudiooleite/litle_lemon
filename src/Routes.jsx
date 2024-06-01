@@ -20,7 +20,6 @@ function AppRoutes() {
                 <Route path="/about" element={<About />} />{" "}
                 <Route path="/reviews" element={<ReviewsCard />} />{" "}
                 <Route path="/menu" element={<Menu />} />{" "}
-                <Route path="/confirmedbooking" element={<ConfirmedBooking />} />{" "}
                 <Route path="*" element={<NoPage />} />
             </Routes>
         </>
