@@ -9,7 +9,7 @@
   src: url("../assets/Fonts/Markazi_Text/MarkaziText-VariableFont_wght.ttf")
     format("truetype");
 }
-
+/* 
 .hero-section {
   display: flex;
   background-color: #495e57;
@@ -63,6 +63,7 @@
 }
 
 /* Media query for smaller screens, like phones */
+<<<<<<< HEAD
 @media screen and (max-width: 1200px) {
   .hero-content {
     margin-left: 200px;
@@ -113,3 +114,5 @@
     font-size: 40pt;
   }
 }
+=======
+>>>>>>> devArea

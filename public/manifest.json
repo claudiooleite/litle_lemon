@@ -8,6 +8,7 @@
       "type": "image/x-icon"
     },
     {
+<<<<<<< HEAD
       "src": "Logo.svg",
       "type": "image/svg",
       "sizes": "192x192"
@@ -15,6 +16,15 @@
     {
       "src": "Logo.svg",
       "type": "image/svg",
+=======
+      "src": "android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "android-chrome-192x192.png",
+      "type": "image/png",
+>>>>>>> devArea
       "sizes": "512x512"
     }
   ],

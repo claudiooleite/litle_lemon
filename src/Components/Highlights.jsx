@@ -37,6 +37,7 @@ function Highlights() {
     return (
         <div className="highlights-main">
             <div className="highlights head">
+
                 <h1>This week specials!</h1>
                 <MyButton to='/menu'>Online Menu</MyButton>
             </div>
@@ -45,6 +46,7 @@ function Highlights() {
                     <Card key={index} maxW='sm' bg='EDEFEE' borderRadius='lg' overflow='hidden'>
                         <CardBody>
                             {dish.imageSrc && (
+
                                 <Box borderRadius='lg' overflow='hidden'>
                                     <img className="image-highlights"
                                         src={dish.imageSrc}
@@ -76,3 +78,4 @@ function Highlights() {
 }
 
 export default Highlights;
+

@@ -1,7 +1,7 @@
-
 import React, { useReducer, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import BookingForm from "./BookingForm";
+import PageContainer from "../PageContainer";
 import { fetchAPI, submitAPI } from "../Bookings/apiSimulator"; // Assuming you have API functions defined in api.js
 
 const BookingPage = () => {
@@ -58,7 +58,9 @@ const BookingPage = () => {
 
     return (
         <div>
-            <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} submitForm={submitForm} />
+            <PageContainer>
+                <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} submitForm={submitForm} />
+            </PageContainer>
         </div>
     );
 };
