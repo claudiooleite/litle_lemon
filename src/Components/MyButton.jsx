@@ -20,7 +20,12 @@ function MyButton({ to, children, size }) {
                 borderRadius='16px'
                 _hover={{ bg: '#ffea82' }}
                 onClick={handleClick}
+                p='4'
+                color='brand.800'
                 size={size}
+                fontFamily='body'
+                fontSize= {{ base: '1.1rem', md: '1.4rem' }}
+                fontWeight='bold'
             >
                 {children}
             </Button>

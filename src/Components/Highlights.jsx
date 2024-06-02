@@ -7,7 +7,6 @@ import Image2 from '../Images/Bruchetta.jpg';
 import Image3 from '../Images/moist-lemon-cake-180205-2.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonBiking } from '@fortawesome/free-solid-svg-icons';
-import '../stylesheets/highlights.css';
 
 const specialDishes = [
     {

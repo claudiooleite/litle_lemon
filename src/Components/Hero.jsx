@@ -52,11 +52,15 @@ function Hero() {
                         We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                     </Text>
                     <Box style={{ textAlign: 'center', padding: '1rem' }} >
-                        <MyButton to='/bookingpage' size={'sm'} >Reserve a table</MyButton>
+                        <MyButton to='/bookingpage' size={'xs'} >Reserve a table</MyButton>
                     </Box>
                 </Flex>
-                <Flex flex="1" justifyContent={isLargerThan992 ? 'flex-end' : 'center'} p={4}>
-                    <Image src={image}
+                <Flex
+                    flex="1"
+                    justifyContent={isLargerThan992 ? 'flex-end' : 'center'}
+                    p={4}>
+                    <Image
+                        src={image}
                         alt="Delicious restaurant food"
                         maxWidth="100%"
                         maxHeight="310px"
