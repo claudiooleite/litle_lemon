@@ -23,9 +23,9 @@ function Nav() {
             <Spacer />
             <Box>
                 <ul className={`nav-links ${showNav ? 'show' : ''}`} id="navigation-menu">
-                    <li><Link to='/specials' className='nav-item'>Specials</Link></li>
-                    <li><Link to='/bookingpage' className='nav-item'>Reserve a Table</Link></li>
-                    <li><Link to='/menu' className='nav-item'>Menu</Link></li>
+                    <li style={{ color: theme.colors.brand[800] }}><Link to='/specials' className='nav-item' >Specials</Link></li>
+                    <li><Link color='brand.800' to='/bookingpage' className='nav-item'>Reserve a Table</Link></li>
+                    <li><Link style={{ color: theme.colors.brand[800] }} to='/menu' className='nav-item'>Menu</Link></li>
                 </ul>
                 <Box className="nav-icon">
                     <Menu

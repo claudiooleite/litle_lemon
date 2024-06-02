@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, Stack, Heading, Text, SimpleGrid, CardFooter, Box } from "@chakra-ui/react";
+import { Card, CardBody, Stack, Spacer, Heading, Text, SimpleGrid, CardFooter, VStack, Box, Flex, useMediaQuery } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import MyButton from "./MyButton";
 import Image1 from '../Images/greek salad.jpg';
@@ -33,14 +33,24 @@ const specialDishes = [
 ];
 
 function Highlights() {
+    const [isLargerThan992] = useMediaQuery("(min-width: 992px)");
     return (
-        <div className="highlights-main">
-            <div className="highlights head">
-
-                <h1>This week specials!</h1>
-                <MyButton to='/menu'>Online Menu</MyButton>
-            </div>
-            <SimpleGrid className="highlights-cards" spacing={4} templateColumns='repeat(auto-fill, minmax(150px, 1fr))'>
+        <Flex
+            py={{ base: 4, md: 8 }}
+            px={{ base: 4, md: 8 }}
+            maxWidth="1024px"
+            width='100%'
+            flexDirection='column'>
+            <Flex>
+                <Heading fontSize='2rem'>This week specials!</Heading>
+                {isLargerThan992 ? (
+                    <>
+                        <Spacer />
+                        <MyButton to='/menu'>Online Menu</MyButton>
+                    </>
+                ) : null}
+            </Flex>
+            <SimpleGrid pacing={4} templateColumns={isLargerThan992? 'repeat(3, minmax(150px, 1fr))' : 'minmax(150px, 1fr)'}>
                 {specialDishes.map((dish, index) => (
                     <Card key={index} maxW='sm' bg='EDEFEE' borderRadius='lg' overflow='hidden'>
                         <CardBody>
@@ -72,7 +82,13 @@ function Highlights() {
                     </Card>
                 ))}
             </SimpleGrid>
-        </div>
+            {isLargerThan992 ? null :
+                (<>
+                    <Spacer />
+                    <MyButton to='/menu'>Online Menu</MyButton>
+                </>
+                )}
+        </Flex >
     );
 }
 
