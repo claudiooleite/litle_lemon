@@ -24,14 +24,14 @@ Welcome to the Little Lemon restaurant web app project! This project was created
 
 ### Home Page
 
-![Home Page Small Screens](./public/%25PUBLIC_URL%25/Image/main.phone.png)
+![Home Page Small Screens](./public/Image/main.phone.png)
 
-![Home Page Large Screens](./public/%25PUBLIC_URL%25/Image/main.largedisplay.png)
+![Home Page Large Screens](./public/Image/main.largedisplay.png)
 
 ### Specials Page
 
-![Specials Page](./public/%25PUBLIC_URL%25/Image/specials.png)
+![Specials Page](./public/Image/specials.png)
 
 ### Booking Page
 
-![Booking Page](./public/%25PUBLIC_URL%25/Image/booking.png)
+![Booking Page](./public/Image/booking.png)
