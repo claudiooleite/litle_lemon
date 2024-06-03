@@ -49,7 +49,8 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
     };
 
     return (
-        <VStack gap='24px'>
+        <VStack gap='24px' py={{ base: 4, md: 8 }}
+            px={{ base: 4, md: 8 }}>
             <form onSubmit={formik.handleSubmit}>
                 <FormControl isInvalid={formik.touched.firstName && formik.errors.firstName} isRequired>
                     <FormLabel htmlFor="firstName">First Name</FormLabel>

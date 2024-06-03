@@ -49,7 +49,8 @@ function ReviewsCard() {
             justifyContent={'center'}
         >
             <Flex
-
+                justifyContent={isLargerThan992 ? 'space-between' : 'center'} 
+                width="100%"
                 maxWidth="1024px"
                 gap={'10'}
                 flexDirection={isLargerThan992 ? 'row' : 'column'}

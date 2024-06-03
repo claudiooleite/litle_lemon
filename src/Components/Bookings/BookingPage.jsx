@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import BookingForm from "./BookingForm";
 import PageContainer from "../PageContainer";
-import { fetchAPI, submitAPI } from "../Bookings/apiSimulator"; // Assuming you have API functions defined in api.js
+import { fetchAPI, submitAPI } from "../Bookings/apiSimulator";
 
 const BookingPage = () => {
     const reducer = (state, action) => {
@@ -48,7 +48,7 @@ const BookingPage = () => {
         try {
             const response = await submitAPI(formData);
             if (response) {
-                navigate("/confirmedbooking");
+                navigate("/confirmedbooking",  { state: formData });
             }
         } catch (error) {
             console.error("Error submitting booking:", error);
