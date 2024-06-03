@@ -52,20 +52,22 @@ function ReviewsCard() {
 
                 maxWidth="1024px"
                 gap={'10'}
-                flexDirection={isLargerThan992? 'row': 'column'}
+                flexDirection={isLargerThan992 ? 'row' : 'column'}
             >
                 {customersSay.map((customer, index) => (
-                    <Card key={index} bg={'brand.secondary'} maxW={'200px'}>
-                        <CardHeader>
-                            <Avatar name={customer.customerName} src={customer.customerImg} />
-                            <Box>
-                                <Heading fontSize="md">{customer.customerName}</Heading>
-                                <Text>{customer.rating}</Text>
-                            </Box>
-                        </CardHeader>
-                        <CardBody paddingTop={'0'}>
-                            <Text>{customer.testimonial}</Text>
-                        </CardBody>
+                    <Card key={index} bg={'brand.secondary'} maxW={isLargerThan992 ? '200px' : null}>
+                        <Flex flexDirection={isLargerThan992 ? 'column' : 'row'}>
+                            <CardHeader>
+                                <Avatar name={customer.customerName} src={customer.customerImg} />
+                                <Box>
+                                    <Heading fontSize="md">{customer.customerName}</Heading>
+                                    <Text>{customer.rating}</Text>
+                                </Box>
+                            </CardHeader>
+                            <CardBody paddingTop={isLargerThan992 ? '0' : null}>
+                                <Text>{customer.testimonial}</Text>
+                            </CardBody>
+                        </Flex>
                     </Card>
                 ))}
             </Flex>
