@@ -46,7 +46,7 @@ const theme = extendTheme({
         color: "brand.800",
         fontSize: "md",
         fontFamily: "body",
-        fontWeight: "bold",
+        fontWeight: "medium",
       },
     },
     Heading: {

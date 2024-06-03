@@ -36,58 +36,66 @@ function Highlights() {
     const [isLargerThan992] = useMediaQuery("(min-width: 992px)");
     return (
         <Flex
-            py={{ base: 4, md: 8 }}
-            px={{ base: 4, md: 8 }}
-            maxWidth="1024px"
-            width='100%'
-            flexDirection='column'>
-            <Flex>
-                <Heading fontSize='2rem'>This week specials!</Heading>
-                {isLargerThan992 ? (
-                    <>
+            justifyContent={'center'}
+        >
+            <Flex
+                py={{ base: 4, md: 8 }}
+                px={{ base: 4, md: 8 }}
+                maxWidth="1024px"
+                width='100%'
+                flexDirection='column'>
+                <Flex justifyContent={'center'} >
+                    <Heading fontSize='2rem'>This week specials!</Heading>
+                    {isLargerThan992 ? (
+                        <>
+                            <Spacer />
+                            <MyButton to='/menu'>Online Menu</MyButton>
+                        </>
+                    ) : null}
+                </Flex>
+                <SimpleGrid justifyItems={'center'} gap={4} templateColumns={isLargerThan992 ? 'repeat(3, minmax(150px, 1fr))' : 'minmax(150px, 1fr)'}>
+                    {specialDishes.map((dish, index) => (
+                        <Card key={index} maxW='sm' bg='EDEFEE' borderRadius='lg' overflow='hidden'>
+                            <CardBody>
+                                {dish.imageSrc && (
+
+                                    <Box borderRadius='lg' overflow='hidden'>
+                                        <img className="image-highlights"
+                                            src={dish.imageSrc}
+                                            alt={dish.altContent}
+                                        />
+                                    </Box>
+                                )}
+                                <Stack mt='6' spacing='3'>
+                                    <Flex justifyContent={'space-between'}>
+                                        <Heading size='sm'>{dish.name}</Heading>
+                                        <Text color='blue.600' fontSize='sm'>
+                                            {dish.price}
+                                        </Text>
+                                    </Flex>
+                                    <Text >
+                                        {dish.description}
+                                    </Text>
+                                </Stack>
+                            </CardBody>
+                            <CardFooter>
+                                <Link to='/menu'>
+                                    <Flex>
+                                        <Text>Order a Delivery</Text> {" "}
+                                        <FontAwesomeIcon style={{ marginLeft: '20px' }} icon={faPersonBiking} />
+                                    </Flex>
+                                </Link>
+                            </CardFooter>
+                        </Card>
+                    ))}
+                </SimpleGrid>
+                {isLargerThan992 ? null :
+                    (<>
                         <Spacer />
                         <MyButton to='/menu'>Online Menu</MyButton>
                     </>
-                ) : null}
+                    )}
             </Flex>
-            <SimpleGrid pacing={4} templateColumns={isLargerThan992? 'repeat(3, minmax(150px, 1fr))' : 'minmax(150px, 1fr)'}>
-                {specialDishes.map((dish, index) => (
-                    <Card key={index} maxW='sm' bg='EDEFEE' borderRadius='lg' overflow='hidden'>
-                        <CardBody>
-                            {dish.imageSrc && (
-
-                                <Box borderRadius='lg' overflow='hidden'>
-                                    <img className="image-highlights"
-                                        src={dish.imageSrc}
-                                        alt={dish.altContent}
-                                    />
-                                </Box>
-                            )}
-                            <Stack mt='6' spacing='3'>
-                                <Heading size='md'>{dish.name}</Heading>
-                                <Text color='blue.600' fontSize='2xl'>
-                                    {dish.price}
-                                </Text>
-                                <Text>
-                                    {dish.description}
-                                </Text>
-                            </Stack>
-                        </CardBody>
-                        <CardFooter>
-                            <Link to='/menu'>
-                                <Text>Order a Delivery</Text>
-                                <FontAwesomeIcon icon={faPersonBiking} />
-                            </Link>
-                        </CardFooter>
-                    </Card>
-                ))}
-            </SimpleGrid>
-            {isLargerThan992 ? null :
-                (<>
-                    <Spacer />
-                    <MyButton to='/menu'>Online Menu</MyButton>
-                </>
-                )}
         </Flex >
     );
 }

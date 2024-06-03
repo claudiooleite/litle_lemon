@@ -25,7 +25,7 @@ function MyButton({ to, children, size }) {
                 size={size}
                 fontFamily='body'
                 fontSize= {{ base: '1.1rem', md: '1.4rem' }}
-                fontWeight='bold'
+                fontWeight='medium'
             >
                 {children}
             </Button>
