@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, Stack, Spacer, Heading, Text, SimpleGrid, CardFooter, VStack, Box, Flex, useMediaQuery } from "@chakra-ui/react";
+import { Card, CardBody, Stack, Spacer, Heading, Text, SimpleGrid, CardFooter, Box, Flex, useMediaQuery } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import MyButton from "./MyButton";
 import Image1 from '../Images/greek salad.jpg';
@@ -36,15 +36,17 @@ function Highlights() {
     const [isLargerThan992] = useMediaQuery("(min-width: 992px)");
     return (
         <Flex
-            justifyContent={'center'}
+            py={{ base: 4, md: 8 }}
+            px={{ base: 4, md: 8 }}
+            justifyContent={'center'} bg='brand.highlight_light'
         >
             <Flex
-                py={{ base: 4, md: 8 }}
-                px={{ base: 4, md: 8 }}
+                gap='10'
                 maxWidth="1024px"
                 width='100%'
-                flexDirection='column'>
-                <Flex justifyContent={'center'} >
+                flexDirection='column'
+                alignItems={isLargerThan992 ? null : 'center'}>
+                <Flex justifyContent={'center'}>
                     <Heading fontSize='2rem'>This week specials!</Heading>
                     {isLargerThan992 ? (
                         <>
@@ -91,7 +93,7 @@ function Highlights() {
                 </SimpleGrid>
                 {isLargerThan992 ? null :
                     (<>
-                        <Spacer />
+
                         <MyButton to='/menu'>Online Menu</MyButton>
                     </>
                     )}

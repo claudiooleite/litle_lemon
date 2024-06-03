@@ -1,4 +1,4 @@
-import { Avatar, Card, Heading, CardHeader, Box, Text, CardBody } from "@chakra-ui/react";
+import { Avatar, Card, Heading, CardHeader, Box, Text, CardBody, Flex, useMediaQuery } from "@chakra-ui/react";
 
 const stars = {
     1: "★☆☆☆☆",
@@ -41,23 +41,35 @@ const customersSay = [
 
 
 function ReviewsCard() {
+    const [isLargerThan992] = useMediaQuery("(min-width: 992px)");
     return (
-        <div>
-            {customersSay.map((customer, index) => (
-                <Card key={index} >
-                    <CardHeader>
-                        <Avatar name={customer.customerName} src={customer.customerImg} />
-                        <Box>
-                            <Heading>{customer.customerName}</Heading>
-                            <Text>{customer.rating}</Text>
-                        </Box>
-                    </CardHeader>
-                    <CardBody>
-                        <Text>{customer.testimonial}</Text>
-                    </CardBody>
-                </Card>
-            ))}
-        </div>
+        <Flex
+            py={{ base: 4, md: 8 }}
+            px={{ base: 4, md: 8 }}
+            justifyContent={'center'}
+        >
+            <Flex
+
+                maxWidth="1024px"
+                gap={'10'}
+                flexDirection={isLargerThan992? 'row': 'column'}
+            >
+                {customersSay.map((customer, index) => (
+                    <Card key={index} bg={'brand.secondary'} maxW={'200px'}>
+                        <CardHeader>
+                            <Avatar name={customer.customerName} src={customer.customerImg} />
+                            <Box>
+                                <Heading fontSize="md">{customer.customerName}</Heading>
+                                <Text>{customer.rating}</Text>
+                            </Box>
+                        </CardHeader>
+                        <CardBody paddingTop={'0'}>
+                            <Text>{customer.testimonial}</Text>
+                        </CardBody>
+                    </Card>
+                ))}
+            </Flex>
+        </Flex>
     )
 }
 

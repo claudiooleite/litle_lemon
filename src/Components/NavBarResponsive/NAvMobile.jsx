@@ -10,7 +10,9 @@ function NavMobile() {
 
     return (
         <nav>
-            <Flex alignItems='center'>
+            <Flex
+                
+                alignItems='center'>
                 <Box p='4' >
                     <RouterLink to='/'>
                         <Image width={'3rem'} id="logo-top" src={image} alt="Logo Little Lemon restaurant" />
