@@ -6,7 +6,7 @@ import PageContainer from "../PageContainer";
 function ConfirmedBooking() {
     const location = useLocation();
     const bookingData = location.state;
-    const headingSize = useBreakpointValue({ base: 'xl', md: '2xl' });
+    const headingSize = useBreakpointValue({ base: 'lg', md: '2xl' });
     const textSize = useBreakpointValue({ base: 'md', md: 'lg' });
     const containerPadding = useBreakpointValue({ base: 4, md: 10 });
     const vstackPadding = useBreakpointValue({ base: 4, md: 8 });

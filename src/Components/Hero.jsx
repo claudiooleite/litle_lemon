@@ -10,7 +10,6 @@ function Hero() {
 
         <Flex
             bg={"brand.primary"}
-            width="100%"
             py={{ base: 4, md: 8 }}
             px={{ base: 4, md: 8 }}
             justifyContent="center"
