@@ -50,7 +50,7 @@ function Hero() {
                         maxWidth='60ch' color='brand.highlight_light'>
                         We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                     </Text>
-                    <Box style={{ textAlign: 'center', padding: '1rem' }} >
+                    <Box style={{ paddingTop:'1rem' }}>
                         <MyButton to='/bookingpage' size={'xs'} >Reserve a table</MyButton>
                     </Box>
                 </Flex>

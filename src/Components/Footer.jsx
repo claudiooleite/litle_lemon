@@ -29,7 +29,7 @@ function Footer() {
                 <Stack direction='column' className='hover effect'>
                     <Button fontSize='1.3rem' variant='link'><Link to='/'>Home</Link></Button>
                     <Button fontSize='1.3rem' variant='link'><Link to='/about'>About</Link></Button>
-                    <Button fontSize='1.3rem' variant='link'><Link to='/menu'>menu</Link></Button>
+                    <Button fontSize='1.3rem' variant='link'><Link to='/menu'>Menu</Link></Button>
                     <Button fontSize='1.3rem' variant='link'>Reservations</Button>
                     <Button fontSize='1.3rem' variant='link'>Order Online</Button>
                     <Button fontSize='1.3rem' variant='link'>Login</Button>
