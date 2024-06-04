@@ -18,9 +18,11 @@ function About() {
                     py={{ base: 4, md: 8 }}
                     px={{ base: 4, md: 8 }}
                     justifyContent='center' maxWidth="1024px"
-                    width="100%">
+                    width="100%"
+                    flexDirection={isLargerThan992 ? 'row' : 'column'}
+                >
 
-                    <Box flexBasis={{ base: '100%', md: '50%' }} mb={{ base: 4, md: 0 }}>
+                    <Box flexBasis={{ base: '100%', lg: '50%' }} mb={{ base: 4, md: 0 }}>
                         <Heading
                             fontSize={headingSize}
                             fontWeight={'medium'}
@@ -48,27 +50,27 @@ function About() {
                             To craft the menu, Mario relies on family recipes and his experience as a chef in Italy. Adrian does all the marketing for the restaurant and led the effort to expand the menu beyond classic Italian to incorporate additional cuisines from the Mediterranean region.
                         </Text>
                     </Box>
-                    <Box flexBasis={{ base: '100%', md: '50%' }} position="relative" height="400px">
+                    <Spacer p='1rem' />
+                    <Box flexBasis={{ base: '100%', lg: '50%' }} position="relative" height="400px" paddingBottom={isLargerThan992? '1rem' : '23rem'}>
                         <Image
                             src={Mario_and_Adrian_A}
                             alt="Mario and Adrian"
                             position="absolute"
                             top="0"
                             left="0"
-                            width="100%"
+                            width="70%"
                             height="auto"
                             zIndex="1"
                         />
+
                         <Image
                             img src={Mario_and_Adrian_B}
                             alt="Mario and Adrian"
                             position="absolute"
-                            top="20px"
-                            left="20px"
-                            width="100%"
+                            top="130px"
+                            left={isLargerThan992 ? "150px" : "100px"}
+                            width="70%"
                             height="auto"
-                            zIndex="2"
-                            opacity="0.8"
                         />
                     </Box>
 

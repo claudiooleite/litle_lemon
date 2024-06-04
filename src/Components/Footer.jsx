@@ -11,7 +11,7 @@ function Footer() {
             px={{ base: 4, md: 8 }}
             flexDirection={isLargerThan992 ? 'row' : 'column'}
             justifyContent='center'
-            
+
         >
 
             <Flex
@@ -27,26 +27,26 @@ function Footer() {
                 </Link>) : null}
                 <Spacer />
                 <Stack direction='column' className='hover effect'>
-                    <Button fontSize='1.3rem' variant='link'><Link to='/'>Home</Link></Button>
-                    <Button fontSize='1.3rem' variant='link'><Link to='/about'>About</Link></Button>
-                    <Button fontSize='1.3rem' variant='link'><Link to='/menu'>Menu</Link></Button>
-                    <Button fontSize='1.3rem' variant='link'>Reservations</Button>
-                    <Button fontSize='1.3rem' variant='link'>Order Online</Button>
-                    <Button fontSize='1.3rem' variant='link'>Login</Button>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'><Link to='/'>Home</Link></Button>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'><Link to='/about'>About</Link></Button>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'><Link to='/menu'>Menu</Link></Button>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'>Reservations</Button>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'>Order Online</Button>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'>Login</Button>
                 </Stack>
                 <Spacer />
                 <Stack direction='column' className='hover effect'>
-                    <Text textAlign={'center'} fontSize='sm' fontWeight='semibold'>Contact</Text>
-                    <Button fontSize='1.3rem' variant='link'>Address</Button>
-                    <Button fontSize='1.3rem' variant='link'>Phone Number</Button>
-                    <Button fontSize='1.3rem' variant='link'>Email</Button>
+                    <Text textAlign={'center'} fontSize='1.2rem' fontWeight='semibold'>Contact</Text>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'>Address</Button>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'>Phone Number</Button>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'>Email</Button>
                 </Stack>
                 <Spacer />
                 <Stack direction='column' className='hover effect'>
-                    <Text fontWeight='semibold' fontSize='sm' textAlign={'center'}>Social Media Links</Text>
-                    <Button fontSize='1.3rem' variant='link'>Instagram</Button>
-                    <Button fontSize='1.3rem' variant='link'>Facebook</Button>
-                    <Button fontSize='1.3rem' variant='link'>Twitter</Button>
+                    <Text fontWeight='semibold' fontSize='1.2rem' textAlign={'center'}>Social Media Links</Text>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'>Instagram</Button>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'>Facebook</Button>
+                    <Button fontSize='1rem' color={'brand.highlight_light'} variant='link'>Twitter</Button>
                 </Stack>
             </Flex>
         </Flex>
