@@ -24,16 +24,16 @@ This is a web application for Little Lemon Restaurant, built as part of a front-
 
 ### 📱 Home Page (Mobile View)
 
-![Home Page Mobile View](src\assets\images\mobile-view-screenshot.png)
+![Home Page Mobile View](./src/assets/images/mobile-view-screenshot.png)
 
 ### 🖥️ Home Page (Desktop View)
 
-![Home Page Desktop View](src\assets\images\specials-page-screenshot.png)
+![Home Page Desktop View](./src/assets/images/desktop-view-screenshot.png)
 
 ### 🍽️ Specials Page
 
-![Specials Page](src\assets\images\specials-page-screenshot.png)
+![Specials Page](./src/assets/images/specials-page-screenshot.png)
 
 ### 📅 Booking Page
 
-![Booking Page](src\assets\images\booking-page-screenshot.png)
+![Booking Page](./src/assets/images/booking-page-screenshot.png)
