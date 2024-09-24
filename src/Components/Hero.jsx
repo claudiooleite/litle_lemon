@@ -1,6 +1,6 @@
 import image from '../Images/restaurant chef B.jpg';
 import MyButton from './MyButton';
-import { Flex, useMediaQuery, Heading, Text, Image, Box, Center } from '@chakra-ui/react';
+import { Flex, useMediaQuery, Heading, Text, Image, Center } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin } from '@fortawesome/free-solid-svg-icons';
 
