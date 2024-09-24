@@ -8,7 +8,7 @@ import ReviewsCard from "./Components/ReviewsCard";
 function App() {
   return (
     <PageContainer>
-      <GridItem area={"main"} mb={4}>
+      <GridItem area={"main"} >
         <Hero />
       </GridItem>
       <GridItem area={"specials"} mb={4}>

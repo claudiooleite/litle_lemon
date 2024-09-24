@@ -1,6 +1,6 @@
 import image from '../Images/restaurant chef B.jpg';
 import MyButton from './MyButton';
-import { Flex, useMediaQuery, Heading, Text, Image, Box } from '@chakra-ui/react';
+import { Flex, useMediaQuery, Heading, Text, Image, Box, Center } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,8 +10,8 @@ function Hero() {
 
         <Flex
             bg={"brand.primary"}
-            py={{ base: 4, md: 8 }}
-            px={{ base: 4, md: 8 }}
+            py={{ base: 4 }}
+            px={{ base: 4 }}
             justifyContent="center"
         >
             <Flex
@@ -23,7 +23,6 @@ function Hero() {
                 <Flex
                     id='content'
                     flexDirection='column'
-                    alignItems={isLargerThan992 ? 'stretch' : 'center'}
                     justifyContent="space-between"
                     height="100%"
                 >
@@ -36,28 +35,38 @@ function Hero() {
                     >
                         Little Lemon
                     </Heading>
-                    <Heading
-                        fontSize={'lg'}
-                        fontWeight={'regular'}
+                    <div style={{ display: 'flex', gap: '6px' }}>
+                        <Center w={5}>
+                            <FontAwesomeIcon
+                                size="s"
+                                style={{ color: "#edefee" }}
+                                icon={faLocationPin}
+
+                            />
+                        </Center>
+                        <Heading
+                            fontSize={'lg'}
+                            fontWeight={'regular'}
+                            color='brand.highlight_light'
+                        >
+                            Chicago
+                        </Heading>
+                    </div>
+                    <Text
+                        maxWidth='60ch'
                         color='brand.highlight_light'
                     >
-                        <FontAwesomeIcon
-                            size="2xs"
-                            style={{ color: "#edefee" }}
-                            icon={faLocationPin} />Chicago</Heading>
-                    <Text
-                        textAlign={isLargerThan992 ? 'inherit' : 'center'}
-                        maxWidth='60ch' color='brand.highlight_light'>
                         We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                     </Text>
-                    <Box style={{ paddingTop:'1rem' }}>
-                        <MyButton to='/bookingpage' size={'xs'} >Reserve a table</MyButton>
-                    </Box>
+                    <Center p='10px' mt='5px' >
+                        <MyButton to='/bookingpage' >Reserve a table</MyButton>
+                    </Center>
                 </Flex>
                 <Flex
                     flex="1"
                     justifyContent={isLargerThan992 ? 'flex-end' : 'center'}
-                    p={4}>
+                    py={4}
+                >
                     <Image
                         src={image}
                         alt="Delicious restaurant food"
