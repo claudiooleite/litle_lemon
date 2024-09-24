@@ -14,7 +14,7 @@ const validationSchema = Yup.object({
     email: Yup.string().email("Invalid email address").required("Email is required"),
     date: Yup.string().required("Date is required"),
     time: Yup.string().required("Time is required"),
-    guests: Yup.number().min(1).max(10).required("Number of guests is required"),
+    guests: Yup.number().min(1).max(10),
     occasion: Yup.string().required("Occasion is required")
 });
 
@@ -40,7 +40,7 @@ const BookingForm = ({ availableTimes, updateTimes, submitForm }) => {
         if (availableTimes.length > 0 && formik.values.time !== availableTimes[0]) {
             formik.setFieldValue("time", availableTimes[0]);
         }
-    }, [availableTimes, formik]);
+    }, [availableTimes, formik.values.time]);
 
     const handleDateChange = (e) => {
         const date = e.target.value;

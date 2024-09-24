@@ -18,7 +18,6 @@ const BookingPage = () => {
 
     const updateTimes = async (date) => {
         try {
-            // Fetch available times for the selected date
             const times = await fetchAPI(date);
             dispatch({ type: "SET_AVAILABLE_TIMES", payload: times });
         } catch (error) {
@@ -28,7 +27,6 @@ const BookingPage = () => {
 
     const initializeTimes = async () => {
         try {
-            // Fetch available times for today's date initially
             const today = new Date().toISOString().split("T")[0];
             const times = await fetchAPI(today);
             dispatch({ type: "SET_AVAILABLE_TIMES", payload: times });
@@ -38,7 +36,6 @@ const BookingPage = () => {
     };
 
     useEffect(() => {
-        // Call initializeTimes when the component mounts
         initializeTimes();
     }, []);
 
@@ -48,7 +45,7 @@ const BookingPage = () => {
         try {
             const response = await submitAPI(formData);
             if (response) {
-                navigate("/confirmedbooking",  { state: formData });
+                navigate("/confirmedbooking", { state: formData });
             }
         } catch (error) {
             console.error("Error submitting booking:", error);
@@ -57,11 +54,13 @@ const BookingPage = () => {
     };
 
     return (
-        <div>
-            <PageContainer>
-                <BookingForm availableTimes={availableTimes} updateTimes={updateTimes} submitForm={submitForm} />
-            </PageContainer>
-        </div>
+        <PageContainer>
+            <BookingForm
+                availableTimes={availableTimes}
+                updateTimes={updateTimes}
+                submitForm={submitForm}
+            />
+        </PageContainer>
     );
 };
 

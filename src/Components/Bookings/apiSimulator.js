@@ -1,68 +1,49 @@
 const availability = {
   "2024-06-03": ["19:00", "21:00"],
-  "2024-06-04": ["17:00", "19:00", "20:00"],
-  "2024-06-05": ["18:00", "20:00", "22:00"],
-  "2024-06-06": ["19:00", "21:00"],
-  "2024-06-07": ["17:00", "20:00", "22:00"],
-  "2024-06-08": ["18:00", "19:00", "21:00"],
-  "2024-06-09": ["17:00", "20:00", "22:00"],
-  "2024-06-10": ["18:00", "19:00", "21:00"],
-  "2024-06-11": ["17:00", "20:00", "22:00"],
-  "2024-06-12": ["18:00", "19:00", "21:00"],
-  "2024-06-13": ["19:00", "21:00"],
-  "2024-06-14": ["17:00", "19:00", "20:00"],
-  "2024-06-15": ["18:00", "20:00", "22:00"],
-  "2024-06-16": ["19:00", "21:00"],
-  "2024-06-17": ["17:00", "20:00", "22:00"],
-  "2024-06-18": ["18:00", "19:00", "21:00"],
-  "2024-06-19": ["17:00", "20:00", "22:00"],
-  "2024-06-20": ["18:00", "19:00", "21:00"],
-  "2024-06-21": ["17:00", "20:00", "22:00"],
-  "2024-06-22": ["18:00", "19:00", "21:00"],
-  "2024-06-23": ["19:00", "21:00"],
-  "2024-06-24": ["17:00", "19:00", "20:00"],
-  "2024-06-25": ["18:00", "20:00", "22:00"],
-  "2024-06-26": ["19:00", "21:00"],
-  "2024-06-27": ["17:00", "20:00", "22:00"],
-  "2024-06-28": ["18:00", "19:00", "21:00"],
-  "2024-06-29": ["17:00", "20:00", "22:00"],
-  "2024-06-30": ["18:00", "19:00", "21:00"],
-  "2024-07-01": ["17:00", "20:00", "22:00"],
-  "2024-07-02": ["18:00", "19:00", "21:00"],
-  "2024-07-03": ["19:00", "21:00"],
-  "2024-07-04": ["17:00", "19:00", "20:00"],
-  "2024-07-05": ["18:00", "20:00", "22:00"],
-  "2024-07-06": ["19:00", "21:00"],
-  "2024-07-07": ["17:00", "20:00", "22:00"],
-  "2024-07-08": ["18:00", "19:00", "21:00"],
-  "2024-07-09": ["17:00", "20:00", "22:00"],
-  "2024-07-10": ["18:00", "19:00", "21:00"],
-  "2024-07-11": ["17:00", "20:00", "22:00"],
-  "2024-07-12": ["18:00", "19:00", "21:00"],
+  // ... predefined availability or empty
+};
+
+const generateRandomAvailability = () => {
+  const times = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+  const numberOfSlots = Math.floor(Math.random() * 3) + 2; // 2 to 4 slots per day
+  const randomSlots = [];
+
+  while (randomSlots.length < numberOfSlots) {
+    const randomIndex = Math.floor(Math.random() * times.length);
+    const randomTime = times[randomIndex];
+
+    if (!randomSlots.includes(randomTime)) {
+      randomSlots.push(randomTime);
+    }
+  }
+
+  return randomSlots.sort(); // Sort to maintain order
 };
 
 const fetchAPI = (date) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      const availableTimes = availability[date] || []; // Return empty array if no times available
+      const availableTimes = availability[date] || generateRandomAvailability();
       resolve(availableTimes);
     }, 1000);
   });
 };
 
 const submitAPI = (formData) => {
-  availability[formData.date] = availability[formData.date].filter(
-    (time) => time !== formData.time
-  );
+  if (availability[formData.date]) {
+    availability[formData.date] = availability[formData.date].filter(
+      (time) => time !== formData.time,
+    );
+  }
 
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (formData) {
-        resolve(true); // Simulate successful submission
+        resolve(true);
       } else {
         reject(new Error("Form submission failed."));
       }
-    }, 1000); // Simulate API delay
+    }, 1000);
   });
 };
 

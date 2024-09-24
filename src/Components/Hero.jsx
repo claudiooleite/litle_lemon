@@ -38,7 +38,7 @@ function Hero() {
                     <div style={{ display: 'flex', gap: '6px' }}>
                         <Center w={5}>
                             <FontAwesomeIcon
-                                size="s"
+                                size="sm"
                                 style={{ color: "#edefee" }}
                                 icon={faLocationPin}
 
