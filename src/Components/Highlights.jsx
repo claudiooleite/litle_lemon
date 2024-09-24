@@ -55,10 +55,10 @@ function Highlights() {
                         </>
                     ) : null}
                 </Flex>
-                <SimpleGrid justifyItems={'center'} gap={4} templateColumns={isLargerThan992 ? 'repeat(3, minmax(150px, 1fr))' : 'minmax(150px, 1fr)'}>
+                <SimpleGrid justifyItems={'center'} gap={4} templateColumns={isLargerThan992 ? 'repeat(3, minmax(150px, 1fr))' : '2, minmax(150px, 1fr)'}>
                     {specialDishes.map((dish, index) => (
-                        <Card key={index} maxW='sm' bg='EDEFEE' borderRadius='lg' overflow='hidden'>
-                            <CardBody>
+                        <Card key={index} maxW='m' bg='EDEFEE' borderRadius='lg' overflow='hidden'>
+                            <CardBody p={0}>
                                 {dish.imageSrc && (
 
                                     <Box borderRadius='lg' overflow='hidden'>
@@ -68,7 +68,7 @@ function Highlights() {
                                         />
                                     </Box>
                                 )}
-                                <Stack mt='6' spacing='3'>
+                                <Stack mt='4' p={4} spacing='3'>
                                     <Flex justifyContent={'space-between'}>
                                         <Heading size='sm'>{dish.name}</Heading>
                                         <Text color='blue.600' fontSize='sm'>
@@ -80,7 +80,7 @@ function Highlights() {
                                     </Text>
                                 </Stack>
                             </CardBody>
-                            <CardFooter>
+                            <CardFooter p={4} pt={0}>
                                 <Link to='/menu'>
                                     <Flex>
                                         <Text>Order a Delivery</Text> {" "}

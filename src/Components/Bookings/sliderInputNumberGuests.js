@@ -5,6 +5,7 @@ import {
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
+  FormLabel,
 } from "@chakra-ui/react";
 
 export function SliderInput() {
@@ -13,7 +14,9 @@ export function SliderInput() {
 
   return (
     <>
-      <label htmlFor="guests">Number of Guests</label>
+      <FormLabel htmlFor="guests" fontSize={{ base: "sm", md: "md" }}>
+        Number of Guests
+      </FormLabel>
       <Flex>
         <Slider
           defaultValue={1}
@@ -22,8 +25,7 @@ export function SliderInput() {
           flex="1"
           focusThumbOnChange={false}
           value={value}
-          onChange={handleChange}
-        >
+          onChange={handleChange}>
           <SliderTrack>
             <SliderFilledTrack />
           </SliderTrack>
