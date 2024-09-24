@@ -1,37 +1,39 @@
-# Little Lemon Restaurant Web App
+# 🍋 Little Lemon Restaurant Web App
 
-## Project Overview
+## 🌟 Overview
 
-Welcome to the Little Lemon restaurant web app project! This project was created as a part of the final assessment for the front-end development course. It demonstrates a comprehensive understanding of front-end development concepts using React. The application is designed to handle table bookings, display weekly specials, and navigate through different sections of the restaurant's offerings.
+This is a web application for Little Lemon Restaurant, built as part of a front-end development course project. It showcases essential front-end skills, including table bookings, special dishes, and seamless navigation across various sections of the restaurant's offerings.
 
-## Features
+## ✨ Key Features
 
-- **Responsive Navbar**: Adapts between a hamburger menu for small screens and a full navigation bar for larger screens.
-- **Hero Section**: Dynamic hero section with a background image for small screens and a side image for larger screens.
-- **Special Dishes**: Display of special dishes in a card format that adjusts to screen size.
-- **Booking Form**: A form to handle table bookings.
-- **Routing**: Implemented using React Router to navigate between different pages.
+- **Responsive Navigation:** A flexible navbar that adapts between a hamburger menu for smaller screens and a full navigation bar for larger ones.
+- **Dynamic Hero Section:** The layout adjusts based on screen size, featuring a full-background image for mobile and a split design for desktop.
+- **Special Dishes Display:** A sleek, responsive card layout presenting the restaurant’s specials.
+- **Booking Form:** A user-friendly form to handle table reservations.
+- **Page Routing:** Smooth navigation between pages, powered by React Router.
 
-## Technologies Used
+## 💻 Technologies
 
-- **React**
-- **React Router**
-- **Chakra UI**
-- **FontAwesome**
-- **CSS** (with responsive design)
+- **React:** Core framework for building the app’s interactive UI.
+- **React Router:** Manages page navigation within the app.
+- **Chakra UI:** Provides simple and responsive UI components.
+- **FontAwesome:** Used for icons throughout the app.
+- **Responsive CSS:** Ensures the app looks great on all devices.
 
-## Screenshots
+## 🖼️ Screenshots
 
-### Home Page
+### 📱 Home Page (Mobile View)
 
-![Home Page Small Screens](./public/Image/main.phone.png)
+![Home Page Mobile View](src\assets\images\mobile-view-screenshot.png)
 
-![Home Page Large Screens](./public/Image/main.largedisplay.png)
+### 🖥️ Home Page (Desktop View)
 
-### Specials Page
+![Home Page Desktop View](src\assets\images\specials-page-screenshot.png)
 
-![Specials Page](./public/Image/specials.png)
+### 🍽️ Specials Page
 
-### Booking Page
+![Specials Page](src\assets\images\specials-page-screenshot.png)
 
-![Booking Page](./public/Image/booking.png)
+### 📅 Booking Page
+
+![Booking Page](src\assets\images\booking-page-screenshot.png)
